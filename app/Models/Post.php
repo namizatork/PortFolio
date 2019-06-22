@@ -6,6 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    //ユーザーテーブル
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    //ブログカテゴリテーブル
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
+    //タグテーブル
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
@@ -14,11 +27,12 @@ class Post extends Model
     //記事データの取得
     static function getPostData(Int $num = null)
     {
-        //数字指定があれば引数の数だけ記事データを取得
+        //数字指定がある場合の処理
         if (isset($num)) {
+            //指定分のデータを取得
             $data = Post::take($num)->get();
-        //数字指定がなければ記事データを全件取得
         } else {
+            //全データを取得
             $data = Post::get();
         }
 
