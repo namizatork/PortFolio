@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //ポートフォリオテーブル
+    public function portfolios()
+    {
+        return $this->hasMany(Portfolio::class);
+    }
+
+    //ブログ記事テーブル
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
