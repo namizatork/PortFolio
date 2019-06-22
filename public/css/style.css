@@ -1,0 +1,339 @@
+/*-----------------------------------------------------*/
+/* Common */
+/*-----------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif!important;
+}
+
+.theme--dark.application {
+    background: #191919;
+}
+
+.theme--dark.v-toolbar {
+    background: #151515;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+a {
+    color: #009688!important;
+}
+
+a:hover {
+    color: #018376!important;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+/*-----------------------------------------------------*/
+/* Container */
+/*-----------------------------------------------------*/
+
+.container {
+    padding: 35px 0;
+}
+
+.container-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.container-title {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.container-title span {
+    display: block;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-title:after {
+    content: '';
+    width: 76px;
+    height: 9px;
+    display: block;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+    bottom: 0;
+    transition: all 0s 0.3s ease-in;
+    background: #009688;
+}
+
+.container-more {
+    margin-top: 30px;
+}
+
+/*-----------------------------------------------------*/
+/* Text */
+/*-----------------------------------------------------*/
+
+.text-xl {
+    font-size: 2.2rem;
+}
+
+.text-lg {
+    font-size: 1.6rem;
+}
+
+.text-md {
+    font-size: 1.4rem;
+}
+
+.text-sm {
+    font-size: 1.2rem;
+}
+
+.text-xs {
+    font-size: 1rem;
+}
+
+.font-weight-title {
+    font-weight: 600;
+}
+
+.line-height {
+    line-height: 1.8;
+}
+
+/*-----------------------------------------------------*/
+/* Color */
+/*-----------------------------------------------------*/
+
+.white-grey--text {
+    color: #cecece!important;
+}
+
+.black-grey--text {
+    color: #3a3a3a!important;
+}
+
+.gradation--text {
+    color: #009688;
+    background: -webkit-linear-gradient(0deg, #009688, #009688);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*-----------------------------------------------------*/
+/* Hover */
+/*-----------------------------------------------------*/
+
+.hover:hover {
+    box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12) !important;
+}
+
+/*-----------------------------------------------------*/
+/* Navi */
+/*-----------------------------------------------------*/
+
+.v-toolbar__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.v-toolbar__content a {
+    padding: 0 20px;
+}
+
+/*-----------------------------------------------------*/
+/* Main */
+/*-----------------------------------------------------*/
+
+.main {
+    background: #3a3a3a;
+    border-radius: 0 0 50% 50%/0 0 8% 8%;
+}
+
+/*-----------------------------------------------------*/
+/* Card */
+/*-----------------------------------------------------*/
+
+.theme--dark.v-card {
+    background: #303030;
+}
+
+.profile-card,
+.introduction-card {
+    height: 515px;
+}
+
+.introduction-card .v-card__text::before {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    right: 100%;
+    content: "";
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #303030;
+    top: calc(30% - 10px);
+}
+
+.card-table th,
+.card-table td {
+    padding: 0.85rem;
+    border-top: none;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #d4d4d4;
+}
+
+.message-head {
+    border-bottom: 1px solid #555;
+}
+
+/*-----------------------------------------------------*/
+/* Skill */
+/*-----------------------------------------------------*/
+
+.skills-table th,
+.skills-table td {
+    padding: 0.85rem;
+    border-top: none;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.skills-table td {
+    padding: 0;
+}
+
+/*-----------------------------------------------------*/
+/* BlogList */
+/*-----------------------------------------------------*/
+
+.blog-list {
+    background: #303030!important;
+}
+
+/*-----------------------------------------------------*/
+/* Jumbotron */
+/*-----------------------------------------------------*/
+
+.v-jumbotron {
+    height: 500px!important;
+    padding: 100px 0;
+}
+
+
+/*-----------------------------------------------------*/
+/* Avatar */
+/*-----------------------------------------------------*/
+
+.center-avatar {
+    margin: -65px auto 0;
+    display: flex;
+}
+
+.center-avatar .v-image {
+    height: 100%!important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #303030;;
+}
+
+.message-profile-image {
+    justify-content: flex-end;
+}
+
+/*-----------------------------------------------------*/
+/* Pickers */
+/*-----------------------------------------------------*/
+
+.v-progress-circular__underlay {
+    stroke: rgba(255,255,255,.1);
+}
+
+/*-----------------------------------------------------*/
+/* Button */
+/*-----------------------------------------------------*/
+
+.v-btn {
+    text-transform: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.v-btn--router:hover {
+    color: #cecece!important;
+}
+
+.round {
+    margin: 6px 8px;
+    padding: 16px;
+    min-width: 88px;
+    display: inline-flex;
+    border-radius: 28px;
+    align-items: center;
+    height: 36px;
+    flex: 0 0 auto;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    outline: 0;
+    transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+    vertical-align: middle;
+    will-change: box-shadow;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.round:hover {
+    color: #2e2e2e!important;
+}
+
+/*-----------------------------------------------------*/
+/* Responsive */
+/*-----------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+
+    /*-----------------------------------------------------*/
+    /* Container */
+    /*-----------------------------------------------------*/
+
+    .container {
+        padding: 35px 16px;
+    }
+
+    /*-----------------------------------------------------*/
+    /* Card */
+    /*-----------------------------------------------------*/
+
+    .profile-card {
+        margin-bottom: 50px;
+    }
+
+    .introduction-card .v-card__text::before {
+        display: none;
+    }
+
+    /*-----------------------------------------------------*/
+    /* Skill */
+    /*-----------------------------------------------------*/
+
+    .skills {
+        margin-bottom: 20px;
+    }
+}
