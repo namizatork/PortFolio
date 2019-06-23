@@ -24,4 +24,13 @@ class Portfolio extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+
+    //ポートフォリオデータの取得
+    static function getPortfolioData()
+    {
+        //全データを取得
+        $data = Portfolio::get();
+
+        return $data;
+    }
 }

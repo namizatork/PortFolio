@@ -21,6 +21,8 @@ class CreatePortfoliosTable extends Migration
             $table->string('name')->comment('案件名');
             $table->string('text')->comment('案件説明');
             $table->string('people')->comment('チーム人数');
+            $table->string('url')->comment('URL');
+            $table->string('git_url')->comment('GitURL');
             $table->dateTime('from')->comment('案件開始日時');
             $table->dateTime('until')->comment('案件終了日時');
             $table->timestamps();
