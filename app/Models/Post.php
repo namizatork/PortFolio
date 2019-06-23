@@ -25,16 +25,10 @@ class Post extends Model
     }
 
     //記事データの取得
-    static function getPostData(Int $num = null)
+    static function getPostData()
     {
-        //数字指定がある場合の処理
-        if (isset($num)) {
-            //指定分のデータを取得
-            $data = Post::take($num)->get();
-        } else {
-            //全データを取得
-            $data = Post::get();
-        }
+        //全データを取得
+        $data = Post::get();
 
         return $data;
     }
