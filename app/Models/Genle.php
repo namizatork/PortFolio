@@ -11,6 +11,6 @@ class Genle extends Model
     //ポートフォリオテーブル
     public function portfolios()
     {
-        return $this->belongsTo(Portfolio::class);
+        return $this->hasMany(Portfolio::class);
     }
 }
