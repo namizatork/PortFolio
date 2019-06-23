@@ -294,19 +294,44 @@
                         <h3 class="text-lg font-weight-light grey--text text--darken-2">今まで開発/制作してきた成果物です。</h3>
                         <span></span>
                     </div>
+        <v-container fluid>
+            <div class="container-outer">
+                <div class="container-inner">
+                    <div class="container-title">
+                        <h2 class="display-2 font-weight-bold">PorfFolio</h2>
+                        <h3 class="text-lg font-weight-light grey--text text--darken-2">今まで開発/制作してきた成果物です。</h3>
+                        <span></span>
+                    </div>
                     <v-layout row wrap>
-                        <v-flex v-for="n in 8" :key="n" xs3 d-flex>
-                            <v-card to="/portfolio" flat tile class="d-flex">
-                                <v-img :src="'/images/upload/test' +n +'.jpg'"  :lazy-src="'/images/upload/test' +n +'.jpg'" aspect-ratio="1" gradient="to top right, rgba(0,150,136,.33), rgba(73,73,73,.7)" class="grey lighten-2">
-                                <template v-slot:placeholder>
-                                    <v-layout fill-height align-center justify-center ma-0>
-                                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                        <v-flex v-for="portfolio in portfolios" :key="portfolio.id" md3 xs6 class="py-3 px-2">
+                            <v-card to="/portfolio">
+                                <v-img :src="portfolio.src" :lazy-src="portfolio.src" aspect-ratio="1" gradient="to top right, rgba(20,20,20,.33), rgba(73,73,73,.7)" height="180px">
+                                    <template v-slot:placeholder>
+                                        <v-layout fill-height align-center justify-center ma-0>
+                                        <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                                        </v-layout>
+                                    </template>
+                                    <v-container fill-height fluid pa-2>
+                                    <v-layout fill-height>
+                                        <v-flex xs12 align-end flexbox>
+                                        <span class="headline white--text" v-text="portfolio.name"></span>
+                                        </v-flex>
                                     </v-layout>
-                                </template>
+                                    </v-container>
                                 </v-img>
+
+                                <v-card-actions>
+                                    <v-spacer></v-spacer>
+                                    <v-btn icon>
+                                    <v-icon>favorite</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
                             </v-card>
                         </v-flex>
                     </v-layout>
+                </div>
+            </div>
+        </v-container>
                 </div>
             </div>
         </v-container>
@@ -354,16 +379,16 @@
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
                             <v-flex class="mt-4 ml-3">
                                 <v-flex class="mb-4">
-                                    <a herf="https://github.com/namizatork" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
+                                    <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <router-link to="https://gitlab.com/namizato?nav_source=navbar" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-gitlab</v-icon> Git Lab</router-link>
+                                    <a href="https://gitlab.com/namizato?nav_source=navbar" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-gitlab</v-icon> Git Lab</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <router-link to="https://twitter.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter</v-icon> Twitter</router-link>
+                                    <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter</v-icon> Twitter</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <router-link to="https://qiita.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss</v-icon> Qiita</router-link>
+                                    <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss</v-icon> Qiita</a>
                                 </v-flex>
                             </v-flex>
                         </v-flex>
@@ -479,12 +504,12 @@
         methods: {
             fetchPosts: function() {
                 axios.get('/api/post').then((res)=>{
-                this.posts = res.data
+                    this.posts = res.data
                 })
             },
             fetchPortfolio: function() {
                 axios.get('/api/portfolio').then((res)=>{
-                this.portfolios = res.data
+                    this.portfolios = res.data
                 })
             }
         },
