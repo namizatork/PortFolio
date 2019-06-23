@@ -5,17 +5,13 @@
         <v-container fluid class="main elevation-5">
             <div class="container-outer">
                 <div class="container-inner">
-                    <v-jumbotron>
-                        <v-layout align-center>
-                            <v-flex>
-                                <h1 class="display-3">Welcome to the <span class="teal--text">PortFolio</span></h1>
-                                <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
-                                <v-divider class="my-3"></v-divider>
-                                <div class="title mb-3"></div>
-                                <v-btn class="mx-0" color="teal" large>実績をみる</v-btn>
-                            </v-flex>
-                        </v-layout>
-                    </v-jumbotron>
+                    <v-flex class="main-text">
+                        <h1 class="display-3">Welcome to the <span class="teal--text">PortFolio</span></h1>
+                        <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+                        <v-divider class="my-3"></v-divider>
+                        <div class="title mb-3"></div>
+                        <v-btn class="mx-0" color="teal" large>実績をみる</v-btn>
+                    </v-flex>
                 </div>
             </div>
         </v-container>
@@ -62,7 +58,7 @@
                         </v-flex>
 
                         <v-flex md7 mx12 class="px-4">
-                            <v-window v-model="window" class=" introduction-card elevation-5" vertical>
+                            <v-window class="introduction-card elevation-5" vertical>
                                 <v-window-item>
                                     <v-card flat>
                                         <v-card-text>
@@ -301,7 +297,7 @@
                     <v-layout row wrap>
                         <v-flex v-for="n in 8" :key="n" xs3 d-flex>
                             <v-card to="/portfolio" flat tile class="d-flex">
-                                <v-img :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`" :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`" aspect-ratio="1" gradient="to top right, rgba(0,150,136,.33), rgba(73,73,73,.7)" class="grey lighten-2">
+                                <v-img :src="'/images/upload/test' +n +'.jpg'"  :lazy-src="'/images/upload/test' +n +'.jpg'" aspect-ratio="1" gradient="to top right, rgba(0,150,136,.33), rgba(73,73,73,.7)" class="grey lighten-2">
                                 <template v-slot:placeholder>
                                     <v-layout fill-height align-center justify-center ma-0>
                                     <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -327,13 +323,13 @@
                         <v-flex md12>
                         <v-card color="grey">
                             <v-list three-line class="blog-list">
-                            <template v-for="(post, index) in posts">
-                                <v-divider :key="index"></v-divider>
-                                <v-list-tile> 
+                            <template v-for="post in posts">
+                                <v-divider :key="post.index"></v-divider>
+                                <v-list-tile :key="post.index"> 
                                     <v-list-tile-content to="/blog">
-                                        <v-list-tile-title :key="index" class="mb-2 text-lg teal--text">{{ post.title }}</v-list-tile-title>
-                                        <v-list-tile-sub-title :key="index" class="mb-3 text-sm">{{ post.text }}</v-list-tile-sub-title>
-                                        <span :key="index" class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon>{{ post.created_at }}</span>
+                                        <v-list-tile-title :key="post.index" class="mb-2 text-lg teal--text">{{ post.title }}</v-list-tile-title>
+                                        <v-list-tile-sub-title :key="post.index" class="mb-3 text-sm">{{ post.text }}</v-list-tile-sub-title>
+                                        <span :key="post.index" class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon>{{ post.created_at }}</span>
                                     </v-list-tile-content>
                                 </v-list-tile>
                             </template>
@@ -358,13 +354,16 @@
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
                             <v-flex class="mt-4 ml-3">
                                 <v-flex class="mb-4">
-                                    <a herf="https://github.com/namizatork" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github-square</v-icon> Git Hub</a>
+                                    <a herf="https://github.com/namizatork" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <router-link to="https://twitter.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter-square</v-icon> Twitter</router-link>
+                                    <router-link to="https://gitlab.com/namizato?nav_source=navbar" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-gitlab</v-icon> Git Lab</router-link>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <router-link to="hhttps://qiita.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss-square</v-icon> Qiita</router-link>
+                                    <router-link to="https://twitter.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter</v-icon> Twitter</router-link>
+                                </v-flex>
+                                <v-flex class="mb-4">
+                                    <router-link to="https://qiita.com/namizatop" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss</v-icon> Qiita</router-link>
                                 </v-flex>
                             </v-flex>
                         </v-flex>
@@ -451,16 +450,10 @@
 <script>
     import axios from 'axios';
     export default {
-        mounted() {
-            var self = this;
-            var url = '/api/post';
-            axios.get(url).then(function(response){
-                self.posts = response.data;
-            });
-        },
         data() {
             return {
                 posts: {},
+                portfolios: {},
                 rating: {
                     html: 6,
                     css: 6,
@@ -482,6 +475,22 @@
                     github: 3
                 }
             }
-        }
+        },
+        methods: {
+            fetchPosts: function() {
+                axios.get('/api/post').then((res)=>{
+                this.posts = res.data
+                })
+            },
+            fetchPortfolio: function() {
+                axios.get('/api/portfolio').then((res)=>{
+                this.portfolios = res.data
+                })
+            }
+        },
+        created() {
+            this.fetchPosts(),
+            this.fetchPortfolio()
+        },
     }
 </script>
