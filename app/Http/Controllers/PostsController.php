@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::getPostData(3);
+        $posts = Post::getPostData();
 
         return $posts;
     }
