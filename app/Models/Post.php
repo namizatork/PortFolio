@@ -13,9 +13,15 @@ class Post extends Model
     }
 
     //ブログカテゴリテーブル
-    public function categories()
+    public function category()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    //ブログイイネテーブル
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 
     //タグテーブル
@@ -27,8 +33,8 @@ class Post extends Model
     //記事データの取得
     static function getPostData()
     {
-        //全データを取得
-        $data = Post::get();
+        //カテゴリテーブルと結合したデータを全件取得
+        $data = Post::with('category')->orderBy('id', 'desc')->get();
 
         return $data;
     }

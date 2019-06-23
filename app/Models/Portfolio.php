@@ -14,9 +14,9 @@ class Portfolio extends Model
     }
 
     //案件ジャンルテーブル
-    public function genles()
+    public function genle()
     {
-        return $this->hasMany(Genle::class);
+        return $this->belongsTo(Genle::class);
     }
 
     //タグテーブル
@@ -28,8 +28,8 @@ class Portfolio extends Model
     //ポートフォリオデータの取得
     static function getPortfolioData()
     {
-        //全データを取得
-        $data = Portfolio::get();
+        //ジャンルテーブルと結合したデータを全件取得
+        $data = Portfolio::with('genle')->orderBy('id', 'desc')->get();
 
         return $data;
     }
