@@ -12,19 +12,22 @@ class PortfoliosTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++)
+        for ($i = 1; $i < 9; $i++)
         {
             Portfolio::create([
                 'user_id' => 1,
                 'genle_id' => $i,
-                'image' => '/images/upload/test' .$i .'.jpg',
+                'src' => '/images/upload/portfolio' .$i .'.png',
                 'name' => 'プロジェクト' .$i,
                 'text' => 'これはテストプロジェクトの内容' .$i,
                 'people' =>  '1',
                 'url' =>  'http://namizatop.sakura.ne.jp/index.html',
                 'git_url' =>  'https://github.com/namizatork',
                 'from' => date('2018-07-01 00:00:00'),
-                'until' => date('2018-08-01 00:00:00')
+                'until' => date('2018-08-01 00:00:00'),
+                'private_flg' => 0,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
     }
