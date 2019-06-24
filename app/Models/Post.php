@@ -33,8 +33,8 @@ class Post extends Model
     //記事データの取得
     static function getPostData()
     {
-        //カテゴリテーブルと結合したデータを全件取得
-        $data = Post::with('category')->orderBy('id', 'desc')->get();
+        //タグテーブルとカテゴリテーブルと結合したデータを全件取得
+        $data = Post::with(['tags','category'])->orderBy('id', 'desc')->get();
 
         return $data;
     }
