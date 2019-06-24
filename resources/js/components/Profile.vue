@@ -294,14 +294,6 @@
                         <h3 class="text-lg font-weight-light grey--text text--darken-2">今まで開発/制作してきた成果物です。</h3>
                         <span></span>
                     </div>
-        <v-container fluid>
-            <div class="container-outer">
-                <div class="container-inner">
-                    <div class="container-title">
-                        <h2 class="display-2 font-weight-bold">PorfFolio</h2>
-                        <h3 class="text-lg font-weight-light grey--text text--darken-2">今まで開発/制作してきた成果物です。</h3>
-                        <span></span>
-                    </div>
                     <v-layout row wrap>
                         <v-flex v-for="portfolio in portfolios" :key="portfolio.id" md3 xs6 class="py-3 px-2">
                             <v-card to="/portfolio">
@@ -322,16 +314,11 @@
 
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                    <v-btn icon>
-                                    <v-icon>favorite</v-icon>
-                                    </v-btn>
+                                     <v-chip label>{{ portfolio.genle.name }}</v-chip>
                                 </v-card-actions>
                             </v-card>
                         </v-flex>
                     </v-layout>
-                </div>
-            </div>
-        </v-container>
                 </div>
             </div>
         </v-container>
@@ -352,9 +339,13 @@
                                 <v-divider :key="post.index"></v-divider>
                                 <v-list-tile :key="post.index"> 
                                     <v-list-tile-content to="/blog">
-                                        <v-list-tile-title :key="post.index" class="mb-2 text-lg teal--text">{{ post.title }}</v-list-tile-title>
-                                        <v-list-tile-sub-title :key="post.index" class="mb-3 text-sm">{{ post.text }}</v-list-tile-sub-title>
+                                        <v-list-tile-title :key="post.index" class="mb-2 text-lg white--text">{{ post.title }}</v-list-tile-title>
+                                        <v-list-tile-sub-title :key="post.index" class="mb-3 white-grey--text text-sm">{{ post.text }}</v-list-tile-sub-title>
                                         <span :key="post.index" class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon>{{ post.created_at }}</span>
+                                        <v-chip label>{{ post.category.name }}</v-chip>
+                                        <v-flex>
+                                            <v-chip v-for="tag in post.tags" :key="tag.index" outline small color="teal">{{ tag.name }}</v-chip>
+                                        </v-flex>
                                     </v-list-tile-content>
                                 </v-list-tile>
                             </template>

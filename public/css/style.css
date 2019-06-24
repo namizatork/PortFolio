@@ -205,6 +205,10 @@ a:focus {
     border-bottom: 1px solid #555;
 }
 
+.v-image__image--cover {
+    background-position: top center!important;
+}
+
 /*-----------------------------------------------------*/
 /* Skill */
 /*-----------------------------------------------------*/
