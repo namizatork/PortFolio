@@ -20,12 +20,12 @@ class PortfoliosTableSeeder extends Seeder
                 'src' => '/images/upload/portfolio' .$i .'.png',
                 'name' => 'プロジェクト' .$i,
                 'text' => 'これはテストプロジェクトの内容' .$i,
-                'people' =>  '1',
+                'people' => random_int(1,3),
                 'url' =>  'http://namizatop.sakura.ne.jp/index.html',
                 'git_url' =>  'https://github.com/namizatork',
                 'from' => date('2018-07-01 00:00:00'),
                 'until' => date('2018-08-01 00:00:00'),
-                'private_flg' => 0,
+                'private_flg' => random_int(0,1),
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
