@@ -1,84 +1,108 @@
 <template>
     <v-content class="p-0">
-        <v-container fluid>
+
+        <v-container v-for="portfolio in portfolios" :key="portfolio.id" fluid>
             <div class="container-outer">
                 <div class="container-inner">
                     <div class="container-title">
-                        <h2 class="display-2 font-weight-bold">Blog</h2>
-                        <h3 class="text-lg font-weight-light grey--text text--darken-2">主に技術系のことや、活動について発信します。</h3>
+                        <h2 class="display-2 font-weight-bold">Portfolio No.{{ portfolio.id }}</h2>
                         <span></span>
                     </div>
-                    <v-layout row wrap>
-                        <v-flex md12>
-                        <v-card color="grey">
-                            <v-list three-line class="blog-list">
-                            <template v-for="(item, index) in items">
-                                <v-subheader v-if="item.header" :key="item.header">
-                                {{ item.header }}
-                                </v-subheader>
-                                <v-divider v-else-if="item.divider" :key="index" :inset="item.inset"></v-divider>
-                                <v-list-tile v-else :key="item.title">
-                                    <v-list-tile-content>
-                                        <v-list-tile-title v-html="item.title" class="mb-2 text-lg teal--text"></v-list-tile-title>
-                                        <v-list-tile-sub-title v-html="item.subtitle" class="mb-3 text-sm"></v-list-tile-sub-title>
-                                        <span class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon> {{ item.date }}</span>
-                                    </v-list-tile-content>
-                                </v-list-tile>
-                            </template>
-                            </v-list>
-                        </v-card>
+                    <v-layout wrap>
+                        <v-flex md12 sm12>
+                            <v-card dark elevation="5" class="portfolio-card">
+                                <v-card-title class="teal">
+                                    <v-avatar color="white" class="mr-3">
+                                        <v-icon color="teal">fal fa-pen</v-icon>
+                                    </v-avatar>
+                                    <h4 class="m-0">Portfolio No.{{ portfolio.id }}</h4>
+                                </v-card-title>
+                                <div class="p-4">
+                                    <v-flex class="py-4 text-center">
+                                        <h4 class="portfolio-card-title font-weight-bold">{{ portfolio.name }}</h4>
+                                    </v-flex>
+                                    <v-flex>
+                                    <p class="text-md white-grey--text">{{ portfolio.text }}</p>
+                                    </v-flex>
+                                </div>
+                                <v-img :src="portfolio.src" :lazy-src="portfolio.src" height="400"></v-img>
+                                <v-card-text style="height: 50px; position: relative">
+                                    <v-btn v-if="portfolio.private_flg == 0" color="teal" absolute top right fab large class="portfolio-card-link">
+                                        <v-icon medium color="white">fal fa-external-link</v-icon>
+                                    </v-btn>
+                                    <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-link" disabled>
+                                        <v-icon medium color="white">fal fa-external-link</v-icon>
+                                    </v-btn>
+                                    <v-btn v-if="portfolio.git_url != null" color="teal" absolute top right fab large class="portfolio-card-git">
+                                         <v-icon medium color="white">fab fa-github</v-icon>
+                                    </v-btn>
+                                    <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-git" disabled>
+                                         <v-icon medium color="white">fab fa-github</v-icon>
+                                    </v-btn>
+                                </v-card-text>
+                                <v-flex class="p-4">
+                                    <v-flex>
+                                        <table class="card-table ui celled striped table">
+                                            <tr>
+                                                <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-calendar</v-icon> 期間</th>
+                                                <td>{{ portfolio.from }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-briefcase</v-icon> 種類</th>
+                                                <td>{{ portfolio.genle.name }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-users</v-icon> 人数</th>
+                                                <td>{{ portfolio.people }}人</td>
+                                            </tr>
+                                        </table>
+                                    </v-flex>
+                                    <v-flex>
+                                        <v-chip v-for="tag in portfolio.tags" :key="tag.index" outline class="grey darken-1">{{ tag.name }}</v-chip>
+                                    </v-flex>
+                                </v-flex>
+                            </v-card>
                         </v-flex>
                     </v-layout>
                 </div>
             </div>
         </v-container>
+
     </v-content>
 </template>
 
 <script>
     import axios from 'axios';
     export default {
-        data: () => ({
-            rating: {
-                html: 6,
-                css: 6,
-                bootstrap: 6,
-                javascript: 5,
-                vue: 4,
-                vuetify: 5,
-                php: 5,
-                laravel: 5,
-                symfony: 4,
-                cakephp: 5,
-                mysql: 5,
-                twitterapi: 6,
-                linux: 5,
-                windows: 6,
-                mac: 6,
-                vagrant: 5,
-                photoshop: 4,
-                github: 3
-            },
-            items: [
-                { header: '最新記事' },
-                {
-                    title: 'Brunch this weekend?',
-                    subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
-                    date: "2019.06.01"
-                },
-                { divider: true, inset: true },
-                {
-                    title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-                    subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.",
-                    date: "2019.06.01"
-                },
-                { divider: true, inset: true },
-                {
-                    title: 'Oui oui',
-                    subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?",
-                    date: "2019.06.01"
+        data() {
+            return {
+                portfolios: {},
+                isUpdating: false
+            }
+        },
+        watch: {
+            isUpdating (val) {
+                if (val) {
+                    setTimeout(() => (this.isUpdating = false), 3000)
                 }
-            ]
-        })
+            }
+        },
+        methods: {
+            fetchPortfolio: function() {
+                axios.get('/api/portfolio').then((res)=>{
+                    this.portfolios = res.data
+                })
+            },
+            remove (item) {
+                const index = this.friends.indexOf(item.name)
+                if (index >= 0) this.friends.splice(index, 1)
+            }
+        },
+        created() {
+            this.fetchPortfolio()
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize)
+        }
     }
 </script>
