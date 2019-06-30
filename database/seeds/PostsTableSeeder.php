@@ -12,7 +12,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++)
+        for ($i = 1; $i < 9; $i++)
         {
             Post::create([
                 'user_id' => 1,

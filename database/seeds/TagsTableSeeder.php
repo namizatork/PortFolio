@@ -13,7 +13,7 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++)
+        for ($i = 1; $i < 9; $i++)
         {
             Tag::create([
                 'name' => 'テストタグ'. $i,
