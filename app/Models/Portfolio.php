@@ -29,7 +29,7 @@ class Portfolio extends Model
     static function getPortfolioData()
     {
         //ジャンルテーブルと結合したデータを全件取得
-        $data = Portfolio::with('genle')->orderBy('id', 'desc')->get();
+        $data = Portfolio::with(['tags', 'genle'])->orderBy('id', 'asc')->get();
 
         return $data;
     }

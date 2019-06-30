@@ -2,6 +2,8 @@ import './bootstrap';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Routes from './routes.js';
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 import '@fortawesome/fontawesome-pro/css/all.css';
 
 import App from './layouts/App';
@@ -21,6 +23,8 @@ Vue.use(Vuetify, {
         'ratingHalf': 'fas fa-circle'
     }
 });
+
+Vue.use(mavonEditor);
 
 const app = new Vue({
     el: '#app',
