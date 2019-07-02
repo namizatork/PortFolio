@@ -11,10 +11,15 @@
 |
 */
 
+// Profile
+Route::resource('api/post', 'ProfilesController');
+Route::resource('api/portfolio', 'ProfilesController');
 
-Route::get('api/post', 'PostsController@index');
+// Portfolio
+Route::resource('api/portfolio', 'PortfoliosController');
 
-Route::get('api/portfolio', 'PortfoliosController@index');
+// // Post
+// Route::resource('api/post', 'PostsController');
 
 Route::get('/{any}', function () {
     //全てのリクエストに対してapp.blade.phpを返す

@@ -31,10 +31,15 @@ class Post extends Model
     }
 
     //記事データの取得
-    static function getPostData()
+    static function getPostData(int $num = null)
     {
-        //タグテーブルとカテゴリテーブルと結合したデータを全件取得
-        $data = Post::with(['tags','category'])->orderBy('id', 'desc')->get();
+        if (isset($num)) {
+            //タグテーブルとカテゴリテーブルと結合したデータを全件取得
+            $data = Post::with(['tags','category'])->orderBy('id', 'desc')->take($num)->get();
+        } else {
+            //タグテーブルとカテゴリテーブルと結合したデータを全件取得
+            $data = Post::with(['tags','category'])->orderBy('id', 'desc')->get();
+        }
 
         return $data;
     }
