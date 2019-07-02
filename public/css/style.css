@@ -106,10 +106,6 @@ a:focus {
     font-weight: 600;
 }
 
-.line-height {
-    line-height: 1.8;
-}
-
 /*-----------------------------------------------------*/
 /* Color */
 /*-----------------------------------------------------*/
@@ -130,16 +126,32 @@ a:focus {
 }
 
 /*-----------------------------------------------------*/
+/* Image */
+/*-----------------------------------------------------*/
+
+.v-image__image {
+    background-position: top!important;
+}
+
+.no-image {
+    height: 400px;
+    background: #cecece;
+}
+
+.no-image .v-icon {
+    font-size: 4rem!important;
+}
+
+/*-----------------------------------------------------*/
 /* Border */
 /*-----------------------------------------------------*/
 
 .border-top {
-    border-top: 2px solid #555!important;
+    border-top: 1px solid #555!important;
 }
 
-
 .border-bottom {
-    border-bottom: 2px solid #555!important;
+    border-bottom: 1px solid #555!important;
 }
 
 /*-----------------------------------------------------*/
@@ -227,6 +239,16 @@ a:focus {
     max-width: 700px;
 }
 
+.portfolio-card h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.portfolio-card h6 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
 .portfolio-card-title {
     margin-bottom: 1em;
     position: relative;
@@ -246,10 +268,12 @@ a:focus {
     transform: translateX(-50%);
     background-color: #cecece;
     border-radius: 2px;
-  }
+}
 
-.v-image__image {
-    background-position: top!important;
+
+.portfolio-card-text {
+    line-height: 2!important;
+    white-space: pre-wrap;
 }
 
 .portfolio-card-link {
@@ -260,6 +284,10 @@ a:focus {
 .portfolio-card-git {
     right: 8rem;
     z-index: 0;
+}
+
+.portfolio-card-footer {
+    min-height: 55px;
 }
 
 /*-----------------------------------------------------*/
@@ -307,6 +335,15 @@ a:focus {
 
 .message-profile-image {
     justify-content: flex-end;
+}
+
+/*-----------------------------------------------------*/
+/* Chip */
+/*-----------------------------------------------------*/
+
+.v-chip .v-chip__content {
+    min-width: 100px;
+    justify-content: center;
 }
 
 /*-----------------------------------------------------*/
@@ -380,6 +417,30 @@ button:focus {
 
     .container {
         padding: 15px 16px;
+    }
+
+    /*-----------------------------------------------------*/
+    /* Text */
+    /*-----------------------------------------------------*/
+
+    .text-xl {
+        font-size: 2rem;
+    }
+
+    .text-lg {
+        font-size: 1.4rem;
+    }
+
+    .text-md {
+        font-size: 1.2rem;
+    }
+
+    .text-sm {
+        font-size: 1rem;
+    }
+
+    .text-xs {
+        font-size: 0.85rem;
     }
 
     /*-----------------------------------------------------*/
