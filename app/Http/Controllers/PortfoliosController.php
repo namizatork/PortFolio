@@ -14,6 +14,18 @@ class PortfoliosController extends Controller
      */
     public function index()
     {
+        $portfolios = Portfolio::getPortfolioData(3);
+
+        return $portfolios;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function portfolio()
+    {
         $portfolios = Portfolio::getPortfolioData();
 
         return $portfolios;

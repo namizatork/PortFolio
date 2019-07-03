@@ -14,9 +14,21 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::getPostData();
+        $posts = Post::getPostData(3);
 
         return $posts;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blog()
+    {
+        $blogs = Post::getPostData();
+
+        return $blogs;
     }
 
     /**
