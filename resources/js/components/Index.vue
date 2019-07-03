@@ -495,12 +495,12 @@
         methods: {
             fetchPosts: function() {
                 axios.get('/api/post').then((res)=>{
-                    this.posts = res.data.posts
+                    this.posts = res.data
                 })
             },
             fetchPortfolio: function() {
                 axios.get('/api/portfolio').then((res)=>{
-                    this.portfolios = res.data.portfolios
+                    this.portfolios = res.data
                 })
             },
             handleResize: function() {

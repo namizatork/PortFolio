@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 //ページコンポーネントをインポートする
-import Profile from './components/Profile';
+import Index from './components/Index';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
@@ -17,8 +17,8 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'Profile',
-            component: Profile
+            name: 'Index',
+            component: Index
         },
         {
             path: '/portfolio',
