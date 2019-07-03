@@ -227,7 +227,7 @@ a:focus {
     vertical-align: middle;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #d4d4d4;
+    color: #9e9e9e;
 }
 
 .message-card > .message-head {
@@ -342,8 +342,9 @@ a:focus {
 /*-----------------------------------------------------*/
 
 .v-chip .v-chip__content {
-    min-width: 100px;
+    min-width: 70px;
     justify-content: center;
+    font-size: 0.7rem;
 }
 
 /*-----------------------------------------------------*/
@@ -462,6 +463,16 @@ button:focus {
 
     .introduction-card .v-card__text::before {
         display: none;
+    }
+
+    .portfolio-card h5 {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    
+    .portfolio-card h6 {
+        margin: 0;
+        font-size: 1.3rem;
     }
 
     /*-----------------------------------------------------*/

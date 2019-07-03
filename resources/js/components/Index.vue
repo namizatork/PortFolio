@@ -36,19 +36,19 @@
                                 <v-card-actions>
                                     <table class="card-table ui celled striped table">
                                         <tr>
-                                            <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-briefcase</v-icon> Work</th>
+                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-briefcase</v-icon> Work</th>
                                             <td>サーバサイドエンジニア</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-portrait</v-icon> Age</th>
-                                            <td>25になりました</td>
+                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-birthday-cake</v-icon> Age</th>
+                                            <td>1994/05/19</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-map-marker-alt</v-icon> Location</th>
+                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-map-marker-alt</v-icon> Location</th>
                                             <td>大阪</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon color="teal" class="mr-2 fa-fw">fal fa-heart</v-icon> Hobby</th>
+                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-heart</v-icon> Hobby</th>
                                             <td>バスケ　ボルダリング</td>
                                         </tr>
                                     </table>
@@ -313,7 +313,7 @@
                                 </v-card-actions>
                             </v-card>
                         </v-flex>
-                        <div class="mt-4 w-100 text-right">
+                        <div class="mt-5 w-100 text-right">
                             <router-link to="/blog" class="text-md">もっと見る</router-link>
                         </div>
                     </v-layout>
@@ -348,7 +348,7 @@
                                 </v-flex>
                             </div>
                         </v-flex>
-                        <div class="mt-4 w-100 text-right">
+                        <div class="mt-5 w-100 text-right">
                             <router-link to="/blog" class="text-md">もっと見る</router-link>
                         </div>
                     </v-layout>

@@ -72,7 +72,7 @@
                                         </v-layout>
                                     </v-flex>
                                     <v-flex align-center justify-center class="py-2 px-3 portfolio-card-footer border-top">
-                                        <v-chip v-for="tag in portfolio.tags" :key="tag.index" outline class="teal teal--text">{{ tag.name }}</v-chip>
+                                        <v-chip v-for="tag in portfolio.tags" :key="tag.index" outline class="grey darken-1">{{ tag.name }}</v-chip>
                                     </v-flex>
                                 </v-flex>
                             </v-card>
