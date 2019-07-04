@@ -494,12 +494,12 @@
         },
         methods: {
             fetchPosts: function() {
-                axios.get('/api/post').then((res)=>{
+                axios.get('/api/index/post').then((res)=>{
                     this.posts = res.data
                 })
             },
             fetchPortfolio: function() {
-                axios.get('/api/portfolio').then((res)=>{
+                axios.get('/api/index/portfolio').then((res)=>{
                     this.portfolios = res.data
                 })
             },

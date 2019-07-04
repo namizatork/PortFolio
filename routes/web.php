@@ -12,13 +12,14 @@
 */
 
 // Profile
-Route::get('api/portfolio', 'PortfoliosController@index');
-Route::get('api/post', 'PostsController@index');
+Route::get('api/index/portfolio', 'PortfoliosController@index');
+Route::get('api/index/post', 'PostsController@index');
 
 // Portfolio
 Route::get('api/portfolio', 'PortfoliosController@portfolio');
 
 // Post
+Route::get('api/post', 'PostsController@blog');
 
 Route::get('/{any}', function () {
     //全てのリクエストに対してapp.blade.phpを返す
