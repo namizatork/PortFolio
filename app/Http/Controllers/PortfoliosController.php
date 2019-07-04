@@ -14,7 +14,7 @@ class PortfoliosController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::getPortfolioData(3);
+        $portfolios = Portfolio::getPortfolioData(8);
 
         return $portfolios;
     }

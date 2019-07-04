@@ -26,10 +26,15 @@ class Portfolio extends Model
     }
 
     //ポートフォリオデータの取得
-    static function getPortfolioData()
+    static function getPortfolioData(int $num = null)
     {
-        //ジャンルテーブルと結合したデータを全件取得
-        $data = Portfolio::with(['tags', 'genle'])->orderBy('id', 'asc')->get();
+        if (isset($num)) {
+            //ジャンルテーブルと結合したデータを全件取得
+            $data = Portfolio::with(['tags', 'genle'])->orderBy('id', 'asc')->take($num)->get();
+        } else {
+            //ジャンルテーブルと結合したデータを全件取得
+            $data = Portfolio::with(['tags', 'genle'])->orderBy('id', 'asc')->get();
+        }
 
         return $data;
     }
