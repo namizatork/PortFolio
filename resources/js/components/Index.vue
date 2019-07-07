@@ -365,7 +365,7 @@
                         <span></span>
                     </div>
                     <v-layout wrap>
-                        <v-flex md4 mx12 class="skills px-4">
+                        <v-flex md4 mx12 class="px-4">
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
                             <v-flex class="mt-4 ml-3">
                                 <v-flex class="mb-4">

@@ -3,10 +3,16 @@
 /public/storage
 /public/images/upload
 /public/mix-manifest.json
+/public/fonts/*
 /storage/*.key
 /vendor
 .env
+package.json
+package-lock.json
+.gitignore
+.gitignore.swp
 .phpunit.result.cache
+.vagrant/*
 Homestead.json
 Homestead.yaml
 npm-debug.log
