@@ -21,6 +21,10 @@ Route::get('api/portfolio', 'PortfoliosController@portfolio');
 // Post
 Route::get('api/post', 'PostsController@blog');
 
+// Contact
+Route::post('api/contact', 'ContactsController@contact');
+
+
 Route::get('/{any}', function () {
     //全てのリクエストに対してapp.blade.phpを返す
     return view('app');
