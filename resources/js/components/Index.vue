@@ -1,7 +1,7 @@
 <template>
     <v-content class="p-0">
 
-        <v-container fluid class="main elevation-5">
+        <v-container fluid id="index" class="main">
             <div class="container-outer">
                 <div class="container-inner">
                     <v-flex class="main-text">
