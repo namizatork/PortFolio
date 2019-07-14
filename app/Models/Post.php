@@ -33,14 +33,33 @@ class Post extends Model
     //記事データの取得
     static function getPostData(int $num = null)
     {
+        $query = Post::with(['tags','category'])->orderBy('id', 'desc');
+
         if (isset($num)) {
             //タグテーブルとカテゴリテーブルと結合したデータを全件取得
-            $data = Post::with(['tags','category'])->orderBy('id', 'desc')->take($num)->get();
+            $data = $query->take($num)->get();
         } else {
             //タグテーブルとカテゴリテーブルと結合したデータを全件取得
-            $data = Post::with(['tags','category'])->orderBy('id', 'desc')->get();
+            $data = $query->get();
         }
 
         return $data;
     }
+
+    //記事データの取得
+    static function getPostPage(int $num = null)
+    {
+        $query = Post::with(['tags','category'])->orderBy('id', 'desc');
+
+        if (isset($num)) {
+            //タグテーブルとカテゴリテーブルと結合したデータを全件取得
+            $data = $query->paginate($num);
+        } else {
+            //タグテーブルとカテゴリテーブルと結合したデータを全件取得
+            $data = $query->paginate();
+        }
+
+        return $data;
+    }
+    
 }

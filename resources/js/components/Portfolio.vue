@@ -1,6 +1,20 @@
 <template>
     <v-content class="p-0">
 
+        <v-container fluid id="portfolio" class="main">
+            <div class="container-outer">
+                <div class="container-inner">
+                    <v-flex class="main-text">
+                        <h1 class="display-3">Welcome to the <span class="teal--text">PortFolio</span></h1>
+                        <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+                        <v-divider class="my-3"></v-divider>
+                        <div class="title mb-3"></div>
+                        <v-btn class="mx-0" color="teal" large>実績をみる</v-btn>
+                    </v-flex>
+                </div>
+            </div>
+        </v-container>
+
         <v-container v-for="portfolio in portfolios" :key="portfolio.id" fluid>
             <div class="container-outer">
                 <div class="container-inner">
@@ -81,42 +95,44 @@
                 </div>
             </div>
         </v-container>
+        <infinite-loading @infinite="infiniteHandler">
+            <div slot="spinner" class="m-5">
+                <v-progress-circular indeterminate color="teal"></v-progress-circular>
+            </div>
+        </infinite-loading>
 
     </v-content>
 </template>
 
 <script>
-    import axios from 'axios';
     export default {
         data() {
             return {
-                portfolios: {},
-                isUpdating: false
-            }
-        },
-        watch: {
-            isUpdating (val) {
-                if (val) {
-                    setTimeout(() => (this.isUpdating = false), 3000)
-                }
-            }
+                page: 1,
+                portfolios: []
+            };
         },
         methods: {
-            fetchPortfolio: function() {
-                axios.get('/api/portfolio').then((res)=>{
-                    this.portfolios = res.data
+            infiniteHandler($state) {
+                axios.get('/api/portfolio', {
+                    params: {
+                        page: this.page,
+                        per_page: 1
+                    },
+                }).then(({ data }) => {
+                    setTimeout(() => {
+                        if (this.page < data.data.length) {
+                            this.page += 1
+                            this.portfolios.push(...data.data)
+                            $state.loaded()
+                        } else {
+                            $state.complete()
+                        }
+                    }, 1000)
+                }).catch((err) => {
+                    $state.complete()
                 })
-            },
-            remove (item) {
-                const index = this.friends.indexOf(item.name)
-                if (index >= 0) this.friends.splice(index, 1)
             }
-        },
-        created() {
-            this.fetchPortfolio()
-        },
-        destroyed() {
-            window.removeEventListener('resize', this.handleResize)
         }
-    }
+    };
 </script>
