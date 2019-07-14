@@ -26,7 +26,7 @@ class PostsController extends Controller
      */
     public function blog()
     {
-        $blogs = Post::getPostData();
+        $blogs = Post::getPostPage(5);
 
         return $blogs;
     }
