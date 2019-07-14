@@ -184,15 +184,28 @@ a:focus {
 /* Main */
 /*-----------------------------------------------------*/
 
+#index.main {
+    background-image: url('../images/index-main.svg');
+}
+
+#portfolio.main {
+    background-image: url('../images/portfolio-main.svg');
+}
+
+#blog.main {
+    background-image: url('../images/blog-main.svg');
+}
+
+#contact.main {
+    background-image: url('../images/contact.svg');
+}
+
 .main {
-    margin-bottom: 100px;
-    background: #3a3a3a;
-    border-radius: 0 0 50% 50%/0 0 8% 8%;
+    max-width: 1280px!important;
 }
 
 .main-text {
-    height: 500px!important;
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 /*-----------------------------------------------------*/
