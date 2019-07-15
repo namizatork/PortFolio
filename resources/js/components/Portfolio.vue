@@ -39,20 +39,20 @@
                                     <p class="portfolio-card-text text-md white-grey--text">{{ portfolio.text }}</p>
                                     </v-flex>
                                 </div>
-                                <v-img v-if="portfolio.private_flg == 0" :src="portfolio.src" :lazy-src="portfolio.src" height="400"></v-img>
+                                <v-img v-if="portfolio.private_flg === 0" :src="portfolio.src" :lazy-src="portfolio.src" height="400"></v-img>
                                 <v-layout v-else align-center justify-center column class="no-image">
                                     <v-icon large color="teal">fal fa-lock-alt</v-icon>
                                     <p class="py-2 teal--text">Sorry Private site.</p>
                                 </v-layout>
                                 <v-card-text style="height: 25px; position: relative">
-                                    <v-btn v-if="portfolio.private_flg == 0" color="teal" absolute top right fab large class="portfolio-card-link">
-                                        <v-icon medium color="white">fal fa-external-link</v-icon>
+                                    <v-btn v-if="portfolio.private_flg === 0 && portfolio.url !== null" :href="portfolio.url" target="_blank" color="teal" absolute top right fab large class="portfolio-card-link">
+                                        <v-icon medium color="white" class="d-flex">fal fa-link</v-icon>
                                     </v-btn>
                                     <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-link" disabled>
-                                        <v-icon medium color="white">fal fa-external-link</v-icon>
+                                        <v-icon medium color="white">fal fa-link</v-icon>
                                     </v-btn>
-                                    <v-btn v-if="portfolio.git_url != null" color="teal" absolute top right fab large class="portfolio-card-git">
-                                         <v-icon medium color="white">fab fa-github</v-icon>
+                                    <v-btn v-if="portfolio.private_flg === 0 && portfolio.git_url !== null" :href="portfolio.git_url" target="_blank" color="teal" absolute top right fab large class="portfolio-card-git">
+                                         <v-icon medium color="white" class="d-flex">fab fa-github</v-icon>
                                     </v-btn>
                                     <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-git" disabled>
                                          <v-icon medium color="white">fab fa-github</v-icon>
