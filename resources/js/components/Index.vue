@@ -5,7 +5,7 @@
             <div class="container-outer">
                 <div class="container-inner">
                     <v-flex class="main-text">
-                        <h1 class="display-3">Welcome to the <span class="teal--text">PortFolio</span></h1>
+                        <h1 class="display-3">Page <span class="teal--text">Profile</span></h1>
                         <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
                         <v-divider class="my-3"></v-divider>
                         <div class="title mb-3"></div>
@@ -309,19 +309,19 @@
                                 </v-img>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                     <v-chip label>{{ portfolio.genle.name }}</v-chip>
+                                     <v-chip outline color="teal">{{ portfolio.genle.name }}</v-chip>
                                 </v-card-actions>
                             </v-card>
                         </v-flex>
                         <div class="mt-5 w-100 text-right">
-                            <router-link to="/blog" class="text-md">もっと見る</router-link>
+                            <router-link to="/portfolio" class="text-md">もっと見る</router-link>
                         </div>
                     </v-layout>
                 </div>
             </div>
         </v-container>
 
-        <v-container fluid>
+        <!-- <v-container fluid>
             <div class="container-outer">
                 <div class="container-inner">
                     <div class="container-title">
@@ -334,7 +334,7 @@
                             <v-flex class="d-inline-flex">                                                
                                 <v-avatar color="grey darken-2" class="mr-3"><v-icon>fal fa-pen</v-icon></v-avatar>
                                 <div>
-                                    <router-link to="/blog" :key="post.index" class="text-lg white--text">{{ post.title }}</router-link>
+                                    <router-link to="/blog" :key="post.index" class="text-md white--text">{{ post.title }}</router-link>
                                     <div class="text-xs">
                                         <span class="teal--text mr-2">{{ post.category.name }}</span>
                                         <span :key="post.index" class="grey--text text--darken-2"><v-icon small class="grey--text text--darken-2 ">fal fa-clock</v-icon> {{ post.created_at }}</span>
@@ -354,7 +354,7 @@
                     </v-layout>
                 </div>
             </div>
-        </v-container>
+        </v-container> -->
 
         <v-container fluid>
             <div class="container-outer">

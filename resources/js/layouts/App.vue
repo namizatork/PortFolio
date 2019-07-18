@@ -5,7 +5,7 @@
             <v-toolbar-items class="hidden-sm-and-down align-items-center">
                 <router-link flat class="grey--text lighten-1" to="/">Profile</router-link>
                 <router-link flat class="grey--text lighten-1" to="/portfolio">PortFolio</router-link>
-                <router-link flat class="grey--text lighten-1" to="/blog">Blog</router-link>
+                <!-- <router-link flat class="grey--text lighten-1" to="/blog">Blog</router-link> -->
                 <router-link flat class="grey--text lighten-1" to="/contact">Contact</router-link>
             </v-toolbar-items>
         </v-toolbar>
