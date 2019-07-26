@@ -5,11 +5,11 @@
             <div class="container-outer">
                 <div class="container-inner">
                     <v-flex class="main-text">
-                        <h1 class="display-3">Page <span class="teal--text">Profile</span></h1>
+                        <h1 class="display-3">NAMIZATO<br><span class="teal--text">SERVERSIDE-ENGINEER </span></h1>
                         <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
                         <v-divider class="my-3"></v-divider>
                         <div class="title mb-3"></div>
-                        <v-btn class="mx-0" color="teal" large>実績をみる</v-btn>
+                        <v-btn to="/portfolio" color="teal" large class="mx-0 white--text">実績をみる</v-btn>
                     </v-flex>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                                         <v-card-text>
                                             <v-layout align-center mb-3>
                                                 <v-avatar color="grey" class="mr-3"><v-icon>fal fa-lightbulb</v-icon></v-avatar>
-                                                <strong class="text-lg">Hi! My name is Tatsuya Namizato</strong>
+                                                <strong class="text-lg">Hi! my name is Tatsuya Namizato</strong>
                                                 <v-spacer></v-spacer>
                                             </v-layout>
                                             <p class="white-grey--text">
@@ -292,7 +292,7 @@
                     </div>
                     <v-layout wrap>
                         <v-flex v-for="portfolio in portfolios" :key="portfolio.id" md3 xs6 class="p-2">
-                            <v-card to="/portfolio">
+                            <v-card>
                                 <v-img :src="portfolio.src" :lazy-src="portfolio.src" aspect-ratio="1" gradient="to top right, rgba(20,20,20,.33), rgba(73,73,73,.7)" height="180" class="portfolio-card-image">
                                     <template v-slot:placeholder>
                                         <v-layout fill-height align-center justify-center ma-0>
@@ -314,7 +314,7 @@
                             </v-card>
                         </v-flex>
                         <div class="mt-5 w-100 text-right">
-                            <router-link to="/portfolio" class="text-md">もっと見る</router-link>
+                            <router-link to="/portfolio" class="text-md">詳しく見る</router-link>
                         </div>
                     </v-layout>
                 </div>
