@@ -13,6 +13,14 @@ Vue.use(VueRouter);
 
 //パスとコンポーネントのマッピングを行う
 const router = new VueRouter({
+    //ページ遷移した時のスクロール位置はトップに設定
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    },
     mode: 'history',
     routes: [
         {
