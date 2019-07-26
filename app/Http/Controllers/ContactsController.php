@@ -5,18 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
-use Validator;
 
 class ContactsController extends Controller
 {
-    const VALIDATIONS = [      
-        'name' => 'required|string|max:255',
-        'company' => 'string|max:255',
-        'requirement' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'text' => 'required|string',
-    ];
-
     /**
      * Send contact form.
      *
@@ -24,22 +15,19 @@ class ContactsController extends Controller
      */
     public function contact(Request $request)
     {
-        // バリデーション実行
-        $validator = Validator::make($request->only('name', 'company', 'requirement', 'email', 'text'), self::VALIDATIONS);
-        // 失敗時
-        if ($validator->fails()) {
-            return response()->json([
-                'result' => false,
-                'errors' => self::formatErrors($validator->errors()),
-                'done' => false
-            ]);
-        }
+        $this->validate($request, [   
+            'name' => 'required|string|max:255',
+            'company' => 'string|max:255',
+            'requirement' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'text' => 'required|string',
+        ]);    
+
         // 成功時
-        Mail::to($request->input('email'))->send(new Contact($request));
+        Mail::to($request->email)->send(new Contact($request));
+
         return response()->json([
-            'result' => true,
-            'errors' => [],
-            'done' => true
+            'result' => true
         ]);
     }
 

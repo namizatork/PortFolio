@@ -1,11 +1,11 @@
-名前： {{ $request_data['name'] }}
+名前： {{ $contact->name }}
 
-会社： {{ $request_data['company'] }}
+会社： {{ $contact->company }}
 
-要件： {{ $request_data['requirement'] }}
+要件： {{ $contact->requirement }}
 
-メール： {{ $request_data['email'] }}
+メール： {{ $contact->email }}
 
 本文：
 
-{{ $request_data['text'] }}
+{{ $contact->text }}
