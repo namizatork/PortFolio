@@ -1,20 +1,6 @@
 <template>
     <v-content class="p-0">
 
-        <v-container fluid id="blog" class="main">
-            <div class="container-outer">
-                <div class="container-inner">
-                    <v-flex class="main-text">
-                        <h1 class="display-3">Welcome to the <span class="teal--text">PortFolio</span></h1>
-                        <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
-                        <v-divider class="my-3"></v-divider>
-                        <div class="title mb-3"></div>
-                        <v-btn class="mx-0" color="teal" large>実績をみる</v-btn>
-                    </v-flex>
-                </div>
-            </div>
-        </v-container>
-
         <v-container fluid>
             <div class="container-outer">
                 <div class="container-inner">
