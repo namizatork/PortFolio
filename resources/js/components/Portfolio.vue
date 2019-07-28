@@ -51,7 +51,7 @@
                                                 <h5><v-icon class="mr-2 fa-fw white-grey--text">fal fa-calendar</v-icon> 期間</h5>
                                             </div>
                                             <div>
-                                                <h6>{{ portfolio.from }}</h6>    
+                                                <h6>{{ portfolio.from | moment }} ~ {{ portfolio.until | moment }}</h6>    
                                             </div>
                                         </v-layout>
                                         <v-layout align-center justify-start class="py-3 white-grey--text">
@@ -91,7 +91,13 @@
 </template>
 
 <script>
+    import moment from 'moment';
     export default {
+        filters: {
+            moment: function (date) {
+                return moment(date).format('YYYY/MM/DD');
+            }
+        },
         data() {
             return {
                 page: 1,
