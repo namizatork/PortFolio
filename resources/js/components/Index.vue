@@ -6,7 +6,7 @@
                 <div class="container-inner">
                     <v-flex class="main-text">
                         <h1 class="display-3">NAMIZATO<br><span class="teal--text">SERVERSIDE-ENGINEER </span></h1>
-                        <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+                        <span class="subheading">Thank you for visiting my portfolio. I’m Namizato of the third year in a server-side engineer career. You can see my achievements below.</span>
                         <v-divider class="my-3"></v-divider>
                         <div class="title mb-3"></div>
                         <v-btn to="/portfolio" color="teal" large class="mx-0 white--text">実績をみる</v-btn>
@@ -367,7 +367,7 @@
                     <v-layout wrap>
                         <v-flex md4 mx12 class="px-4">
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
-                            <v-flex class="mt-4 ml-3">
+                            <v-flex class="mt-4 message-card">
                                 <v-flex class="mb-4">
                                     <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
                                 </v-flex>
@@ -385,7 +385,7 @@
 
                         <v-flex md8 mx12 class="skills px-4">
                             <h4 class="text-lg teal--text">MESSAGE</h4>
-                            <v-flex class="mt-4 ml-3">
+                            <v-flex class="mt-4 message-card">
                                 <v-card class="message-card">
                                     <v-card-title class="message-head justify-space-between">
                                         <v-flex>
@@ -394,9 +394,9 @@
                                             <span class="text-xs grey--text">宛先: namizato</span>
                                         </v-flex>
                                         <v-flex class="text-right">
-                                            <span class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon> 2019.06.01</span>
+                                            <span class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon> 2019.08.01</span>
                                             <v-list-tile-avatar color="grey darken-3" class="message-profile-image mt-2">
-                                                <v-img class="elevation-6" src="/images/profile-image.jpg"></v-img>
+                                                <v-avatar color="grey" class="elevation-1"><v-icon>fal fa-user</v-icon></v-avatar>
                                             </v-list-tile-avatar>
                                         </v-flex>
                                     </v-card-title>
