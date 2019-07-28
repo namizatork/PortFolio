@@ -18,9 +18,21 @@
 
         <v-footer height="auto" class="elevation-6">
             <v-layout justify-center row wrap>
-                <v-btn v-for="link in links" :key="link" flat class="my-3">
-                    {{ link }}
-                </v-btn>
+                <div class="p-3 d-inline-flex">
+                    <v-flex class="px-3">
+                        <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-github</v-icon> 
+                    </a>
+                    </v-flex>
+                    <v-flex class="px-3">
+                        <a href="https://gitlab.com/namizato?nav_source=navbar" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-gitlab</v-icon></a>
+                    </v-flex>
+                    <v-flex class="px-3">
+                        <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-twitter</v-icon></a>
+                    </v-flex>
+                    <v-flex class="px-3">
+                        <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fas fa-rss</v-icon></a>
+                    </v-flex>
+                </div>
                 <v-flex xs12 class="py-3 grey darken-3 text-xs-center text-xs grey--text">
                     &copy;2019 <strong>PortFolio</strong>
                 </v-flex>
@@ -29,16 +41,3 @@
 
     </v-app>
 </template>
-
-<script>
-  export default {
-    data: () => ({
-      links: [
-        'Profile',
-        'PortFolio',
-        'Blog',
-        'Contact'
-      ]
-    })
-  }
-</script>
