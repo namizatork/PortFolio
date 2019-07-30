@@ -27,7 +27,7 @@
                                 </div>
                                 <v-img v-if="portfolio.private_flg === 0" :src="portfolio.src" :lazy-src="portfolio.src" height="400"></v-img>
                                 <v-layout v-else align-center justify-center column class="no-image">
-                                    <v-icon large color="teal">fal fa-lock-alt</v-icon>
+                                    <v-icon color="teal">fal fa-lock-alt</v-icon>
                                     <p class="py-2 teal--text">Sorry Private site.</p>
                                 </v-layout>
                                 <v-card-text style="height: 25px; position: relative">
