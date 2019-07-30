@@ -190,7 +190,7 @@
                     <v-layout wrap>
                         <v-flex md4 sm12 class="skills px-4">
                             <h4 class="text-lg teal--text">FRONT END</h4>
-                            <table class="mt-2 ml-3 skills-table ui celled striped table">
+                            <table class="mt-2 right-box skills-table ui celled striped table">
                                 <tr>
                                     <th>HTML</th>
                                     <td><v-rating v-model="rating.html" length="6" color="teal" background-color="black-grey" small readonly></v-rating></td>
@@ -220,7 +220,7 @@
 
                         <v-flex md4 sm12 class="skills px-4">
                             <h4 class="text-lg teal--text">BACK END</h4>
-                            <table class="mt-2 ml-3 skills-table ui celled striped table">
+                            <table class="mt-2 right-box skills-table ui celled striped table">
                                 <tr>
                                     <th>PHP</th>
                                     <td><v-rating v-model="rating.php" length="6" color="teal" background-color="black-grey" small readonly></v-rating></td>
@@ -250,7 +250,7 @@
 
                         <v-flex md4 sm12 class="skills px-4">
                             <h4 class="text-lg teal--text">OTHER/TOOL</h4>
-                            <table class="mt-2 ml-3 skills-table ui celled striped table">
+                            <table class="mt-2 right-box skills-table ui celled striped table">
                                 <tr>
                                     <th>Linux</th>
                                     <td><v-rating v-model="rating.linux" length="6" color="teal" background-color="black-grey" small readonly></v-rating></td>
@@ -293,20 +293,19 @@
                     <v-layout wrap>
                         <v-flex v-for="portfolio in portfolios" :key="portfolio.id" md3 xs6 class="p-2">
                             <v-card>
-                                <v-img :src="portfolio.src" :lazy-src="portfolio.src" aspect-ratio="1" gradient="to top right, rgba(20,20,20,.33), rgba(73,73,73,.7)" height="180" class="portfolio-card-image">
-                                    <template v-slot:placeholder>
-                                        <v-layout fill-height align-center justify-center ma-0>
-                                        <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                                        </v-layout>
-                                    </template>
+                                <v-img v-if="portfolio.private_flg === 0" :src="portfolio.src" :lazy-src="portfolio.src" aspect-ratio="1" gradient="to top right, rgba(20,20,20,.33), rgba(73,73,73,.7)" height="180" class="portfolio-card-image">
                                     <v-container fill-height fluid pa-2>
-                                    <v-layout fill-height>
-                                        <v-flex xs12 align-end flexbox>
-                                        <span class="headline white--text" v-text="portfolio.name"></span>
-                                        </v-flex>
-                                    </v-layout>
+                                        <v-layout fill-height>
+                                            <v-flex xs12 align-end flexbox>
+                                                <span class="headline white--text" v-text="portfolio.name"></span>
+                                            </v-flex>
+                                        </v-layout>
                                     </v-container>
                                 </v-img>
+                                <v-layout v-else align-center justify-center column class="profile-no-image" style="height: 180px;">
+                                    <v-icon large color="teal">fal fa-lock-alt</v-icon>
+                                    <p class="py-2 teal--text">Sorry Private site.</p>
+                                </v-layout>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
                                      <v-chip outline color="teal">{{ portfolio.genle.name }}</v-chip>
@@ -367,7 +366,7 @@
                     <v-layout wrap>
                         <v-flex md4 mx12 class="px-4">
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
-                            <v-flex class="mt-4 message-card">
+                            <v-flex class="mt-4 right-box">
                                 <v-flex class="mb-4">
                                     <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
                                 </v-flex>
@@ -385,7 +384,7 @@
 
                         <v-flex md8 mx12 class="skills px-4">
                             <h4 class="text-lg teal--text">MESSAGE</h4>
-                            <v-flex class="mt-4 message-card">
+                            <v-flex class="mt-4 right-box">
                                 <v-card class="message-card">
                                     <v-card-title class="message-head justify-space-between">
                                         <v-flex>

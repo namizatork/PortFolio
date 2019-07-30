@@ -8,7 +8,27 @@
                 <!-- <router-link flat class="grey--text lighten-1" to="/blog">Blog</router-link> -->
                 <router-link flat class="grey--text lighten-1" to="/contact">Contact</router-link>
             </v-toolbar-items>
+
+            <v-btn fab dark small color="teal" @click.stop="drawer = !drawer" class="mr-3 menu-btn">
+                <v-icon>fal fa-bars</v-icon>
+            </v-btn>
         </v-toolbar>
+
+
+        <v-navigation-drawer v-model="drawer" fixed="" temporary style="margin-top: 56px;">
+            <v-list class="pt-4" dense>
+                <v-list-tile v-for="item in items" :key="item.title" :to="item.url" class="py-2">
+                    <v-list-tile-action>
+                        <v-icon small color="grey">{{ item.icon }}</v-icon>
+                    </v-list-tile-action>
+
+                    <v-list-tile-content>
+                        <v-list-tile-title class="text-lg white--text">{{ item.title }}</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
+
 
         <v-content>
             <v-container fluid class="p-0">
@@ -41,3 +61,18 @@
 
     </v-app>
 </template>
+
+<script>
+    export default {
+        data () {
+            return {
+                drawer: null,
+                items: [
+                    { title: 'Profile', icon: 'fal fa-user', url: '/' },
+                    { title: 'Portfolio', icon: 'fal fa-layer-plus', url: '/portfolio' },
+                    { title: 'Contact', icon: 'fal fa-paper-plane', url: '/contact' }
+                ]
+            }
+        }
+    }
+</script>
