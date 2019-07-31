@@ -14,7 +14,6 @@
             </v-btn>
         </v-toolbar>
 
-
         <v-navigation-drawer v-model="drawer" fixed="" temporary style="margin-top: 56px;">
             <v-list class="pt-4" dense>
                 <v-list-tile v-for="item in items" :key="item.title" :to="item.url" class="py-2">

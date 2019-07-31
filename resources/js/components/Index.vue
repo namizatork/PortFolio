@@ -36,19 +36,19 @@
                                 <v-card-actions>
                                     <table class="card-table ui celled striped table">
                                         <tr>
-                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-briefcase</v-icon> Work</th>
+                                            <th><v-icon class="fa-fw grey--text">fal fa-briefcase</v-icon></th>
                                             <td>サーバサイドエンジニア</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-birthday-cake</v-icon> Age</th>
+                                            <th><v-icon class="fa-fw grey--text">fal fa-birthday-cake</v-icon></th>
                                             <td>1994/05/19</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-map-marker-alt</v-icon> Location</th>
+                                            <th><v-icon class="fa-fw grey--text">fal fa-map-marker-alt</v-icon></th>
                                             <td>大阪</td>
                                         </tr>
                                         <tr>
-                                            <th><v-icon class="mr-2 fa-fw grey--text">fal fa-heart</v-icon> Hobby</th>
+                                            <th><v-icon class="fa-fw grey--text">fal fa-heart</v-icon></th>
                                             <td>バスケ　ボルダリング</td>
                                         </tr>
                                     </table>
@@ -112,8 +112,8 @@
                                         <span>2017.04</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="headline">沖縄のIT会社に新卒入社</v-card-title>
-                                        <v-card-text class="white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">沖縄のIT会社に新卒入社</v-card-title>
+                                        <v-card-text class="text-xs white-grey--text">
                                             商業科卒なので、パソコンを使う仕事がしたい。<br>
                                             同時に物作り好きなのでIT系が良いのではと思い、<br>
                                             沖縄の自社/受託開発を行なっている会社に就職<br>
@@ -128,8 +128,8 @@
                                         <span>2017.07</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="headline">大阪で実際の開発業務</v-card-title>
-                                        <v-card-text class="white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">大阪で実際の開発業務</v-card-title>
+                                        <v-card-text class="text-xs white-grey--text">
                                             大阪に来て、すぐに求人サイトを作る事になり、<br>
                                             WEBのことをよく分からないままスタート<br>
                                             会社にWEBエンジニアが居らず、独学でWEBを勉強<br>
@@ -144,8 +144,8 @@
                                         <span>2018.12</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="headline">1社目を退職</v-card-title>
-                                        <v-card-text class="white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">1社目を退職</v-card-title>
+                                        <v-card-text class="text-xs white-grey--text">
                                             この辺りでそれなりの案件を経験する。<br>
                                             しかし、チーム開発体制が整っておらず、<br>
                                             この会社に居てもこれ以上の成長は見込めないと<br>
@@ -160,8 +160,8 @@
                                         <span>2019.06</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="headline">現職に入社して勉強不足を実感</v-card-title>
-                                        <v-card-text class="white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">現職に入社して勉強不足を実感</v-card-title>
+                                        <v-card-text class="text-xs white-grey--text">
                                             (ポートフォリオ作成現在の年月)<br>
                                             現職ではフロントエンド開発は行わず、<br>
                                             サーバーサイドの受託/自社開発に注力。<br>
@@ -303,6 +303,13 @@
                                     </v-container>
                                 </v-img>
                                 <v-layout v-else align-center justify-center column class="profile-no-image" style="height: 180px;">
+                                    <v-container fill-height fluid pa-2>
+                                        <v-layout fill-height>
+                                            <v-flex xs12 align-end flexbox>
+                                                <span class="headline white--text" v-text="portfolio.name"></span>
+                                            </v-flex>
+                                        </v-layout>
+                                    </v-container>
                                     <v-icon large color="teal">fal fa-lock-alt</v-icon>
                                     <p class="py-2 teal--text">Sorry Private site.</p>
                                 </v-layout>
