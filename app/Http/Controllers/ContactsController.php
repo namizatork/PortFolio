@@ -14,17 +14,20 @@ class ContactsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function contact(Request $request)
-    {
+    {   
         $this->validate($request, [   
             'name' => 'required|string|max:255',
             'company' => 'string|max:255',
             'requirement' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'text' => 'required|string',
-        ]);    
+        ]);
 
-        // 成功時
-        Mail::to($request->email)->send(new Contact($request));
+        //Mailアドレスを呼び出し
+        $mail = config('const.mail');
+
+        //成功時
+        Mail::to($mail)->send(new Contact($request));
 
         return response()->json([
             'result' => true
