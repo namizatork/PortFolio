@@ -11,7 +11,7 @@ body {
 }
 
 .application {
-    line-height: 1!important;
+    line-height: 1.7!important;
 }
 
 .theme--dark.application {
@@ -116,12 +116,12 @@ a:focus {
 /*-----------------------------------------------------*/
 
 .text-pre-line-wrap {
-    white-space: pre-line;
+    white-space: normal;
     word-wrap: break-word;
 }
 
 .wrap-normal {
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 /*-----------------------------------------------------*/
