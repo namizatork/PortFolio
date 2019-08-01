@@ -22,7 +22,7 @@
                                         <h4 class="portfolio-card-title font-weight-bold">{{ portfolio.name }}</h4>
                                     </v-flex>
                                     <v-flex>
-                                    <p class="portfolio-card-text text-md white-grey--text">{{ portfolio.text }}</p>
+                                        <p class="portfolio-card-text text-md white-grey--text">{{ portfolio.text }}</p>
                                     </v-flex>
                                 </div>
                                 <v-img v-if="portfolio.private_flg === 0" :src="portfolio.src" :lazy-src="portfolio.src" height="400"></v-img>
@@ -47,33 +47,33 @@
                                 <v-flex>
                                     <v-flex class="p-4">
                                         <v-layout align-center justify-start class="py-3 white-grey--text">
-                                            <div class="pr-5">
-                                                <h5><v-icon class="mr-2 fa-fw white-grey--text">fal fa-calendar</v-icon> 期間</h5>
+                                            <div class="d-inline-flex align-items-center pr-5">
+                                                <h5>期間</h5>
                                             </div>
                                             <div>
                                                 <h6>{{ portfolio.from | moment }} ~ {{ portfolio.until | moment }}</h6>    
                                             </div>
                                         </v-layout>
                                         <v-layout align-center justify-start class="py-3 white-grey--text">
-                                            <div class="pr-5">
-                                                <h5><v-icon class="mr-2 fa-fw white-grey--text">fal fa-briefcase</v-icon> 種類</h5>
+                                            <div class="d-inline-flex align-items-center pr-5">
+                                                <h5>種類</h5>
                                             </div>
                                             <div>
                                                 <h6>{{ portfolio.genle.name }}</h6>
                                             </div>
                                         </v-layout>
                                         <v-layout align-center justify-start class="py-3 white-grey--text">
-                                            <div class="pr-5">
-                                                <h5><v-icon class="mr-2 fa-fw white-grey--text">fal fa-users</v-icon> 人数</h5>
+                                            <div class="d-inline-flex align-items-center pr-5">
+                                                <h5>人数</h5>
                                             </div>
                                             <div>
                                                 <h6>{{ portfolio.people }}人</h6>
                                             </div>
                                         </v-layout>
                                     </v-flex>
-                                    <v-flex align-center justify-center class="py-2 px-3 portfolio-card-footer border-top">
-                                        <v-chip v-for="tag in portfolio.tags" :key="tag.index" outline class="grey darken-1">{{ tag.name }}</v-chip>
-                                    </v-flex>
+                                    <v-layout d-inline-flex align-items-center justify-start flex-wrap class="py-2 px-3 w-100 portfolio-card-footer border-top">
+                                        <v-chip v-for="tag in portfolio.tags" :key="tag.index" outline class="teal teal--text">{{ tag.name }}</v-chip>
+                                    </v-layout>
                                 </v-flex>
                             </v-card>
                         </v-flex>

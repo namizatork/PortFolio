@@ -10,6 +10,10 @@ body {
     overflow: hidden;
 }
 
+.application {
+    line-height: 1!important;
+}
+
 .theme--dark.application {
     background: #191919;
 }
@@ -105,6 +109,19 @@ a:focus {
 
 .font-weight-title {
     font-weight: 600;
+}
+
+/*-----------------------------------------------------*/
+/* TextWrap */
+/*-----------------------------------------------------*/
+
+.text-pre-line-wrap {
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.wrap-normal {
+    line-height: 1.5;
 }
 
 /*-----------------------------------------------------*/
@@ -236,11 +253,6 @@ a:focus {
 
 .theme--dark.v-card {
     background: #303030;
-}
-
-.profile-card,
-.introduction-card {
-    height: 515px;
 }
 
 .introduction-card .v-card__text::before {
@@ -388,10 +400,22 @@ a:focus {
 /* Chip */
 /*-----------------------------------------------------*/
 
-.v-chip .v-chip__content {
-    min-width: 70px;
+.v-chip.v-chip.v-chip--outline {
+    max-width: 65px;
+    min-width: 65px;
+    height: 25px;
     justify-content: center;
-    font-size: 0.7rem;
+}
+
+.v-chip .v-chip__content {
+    padding: 0;
+    justify-content: center;
+    font-size: 0.5rem;
+}
+
+.profile-chip {
+    max-width: 100px!important;
+    min-width: 100px!important;
 }
 
 /*-----------------------------------------------------*/
@@ -516,14 +540,11 @@ button:focus {
         display: none;
     }
 
-    .portfolio-card h5 {
+    .portfolio-card h5,
+    .portfolio-card h6
+     {
         margin: 0;
-        font-size: 1.3rem;
-    }
-    
-    .portfolio-card h6 {
-        margin: 0;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .right-box {
