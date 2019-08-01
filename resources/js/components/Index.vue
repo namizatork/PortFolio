@@ -57,7 +57,7 @@
                         </v-flex>
 
                         <v-flex md7 sm12 class="px-4">
-                            <v-window class="introduction-card elevation-5" vertical>
+                            <v-window class="introduction-card hover elevation-5" vertical>
                                 <v-window-item>
                                     <v-card flat>
                                         <v-card-text>
@@ -66,7 +66,7 @@
                                                 <strong class="text-lg">Hi! my name is Tatsuya Namizato</strong>
                                                 <v-spacer></v-spacer>
                                             </v-layout>
-                                            <p class="white-grey--text">
+                                            <p class="text-pre-line-wrap text-sm white-grey--text">
                                                 初めまして、沖縄出身の並里です。<br>
                                                 プログラミング未経験でIT業界に飛び込んでから<br>
                                                 毎日死にものぐるいでプログラミングしてます。<br>
@@ -83,7 +83,7 @@
                                                 PS.東京進出を考えているので、互いの条件がマッチする<br>
                                                 企業様がいれば転職も視野に入れ考えております！
                                             </p>
-                                            <div class="py-1 text-right">
+                                            <div class="py-3 text-right">
                                                 <router-link to="/contact">興味があればこちらからご連絡下さい。</router-link>
                                             </div>
                                         </v-card-text>
@@ -112,13 +112,13 @@
                                         <span>2017.04</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">沖縄のIT会社に新卒入社</v-card-title>
-                                        <v-card-text class="text-xs white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-md">沖縄のIT会社に新卒入社</v-card-title>
+                                        <v-card-text class="pl-4 text-pre-line-wrap text-sm white-grey--text">
                                             商業科卒なので、パソコンを使う仕事がしたい。<br>
                                             同時に物作り好きなのでIT系が良いのではと思い、<br>
                                             沖縄の自社/受託開発を行なっている会社に就職<br>
                                             プログラム経験0で入社して、必死に勉強する。<br>
-                                            いつの間にか同期の中で一番良い評価貰って、<br>
+                                            いつの間にか同期の中で一番良い評価を頂いて、<br>
                                             同年の7月に開発業務をしている大阪に転勤。
                                         </v-card-text>
                                     </v-card>
@@ -128,8 +128,8 @@
                                         <span>2017.07</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">大阪で実際の開発業務</v-card-title>
-                                        <v-card-text class="text-xs white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-md">大阪で実際の開発業務</v-card-title>
+                                        <v-card-text class="pl-4 text-pre-line-wrap text-sm white-grey--text">
                                             大阪に来て、すぐに求人サイトを作る事になり、<br>
                                             WEBのことをよく分からないままスタート<br>
                                             会社にWEBエンジニアが居らず、独学でWEBを勉強<br>
@@ -144,8 +144,8 @@
                                         <span>2018.12</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">1社目を退職</v-card-title>
-                                        <v-card-text class="text-xs white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-md">1社目を退職</v-card-title>
+                                        <v-card-text class="pl-4 text-pre-line-wrap text-sm white-grey--text">
                                             この辺りでそれなりの案件を経験する。<br>
                                             しかし、チーム開発体制が整っておらず、<br>
                                             この会社に居てもこれ以上の成長は見込めないと<br>
@@ -157,18 +157,17 @@
                                 </v-timeline-item>
                                 <v-timeline-item color="teal" large>
                                     <template v-slot:opposite>
-                                        <span>2019.06</span>
+                                        <span>2019.08</span>
                                     </template>
                                     <v-card class="elevation-2" elevation="5">
-                                        <v-card-title class="pt-3 pb-0 px-3 text-sm">現職に入社して勉強不足を実感</v-card-title>
-                                        <v-card-text class="text-xs white-grey--text">
+                                        <v-card-title class="pt-3 pb-0 px-3 text-md">現職に入社して勉強不足を実感</v-card-title>
+                                        <v-card-text class="pl-4 text-pre-line-wrap text-sm white-grey--text">
                                             (ポートフォリオ作成現在の年月)<br>
                                             現職ではフロントエンド開発は行わず、<br>
                                             サーバーサイドの受託/自社開発に注力。<br>
-                                            現職に入社してから本格的に勉強不足を痛感<br>
-                                            それから休日は勉強したり、様々な勉強会にも参加<br>
+                                            休日は自分で勉強したり、様々な勉強会にも参加<br>
                                             自分でもコミュニティを作りたいと思い、<br>
-                                            Laravel勉強会を開催しました。
+                                            Laravelもくもく会を開催しました。
                                         </v-card-text>
                                     </v-card>
                                 </v-timeline-item>
@@ -297,7 +296,7 @@
                                     <v-container fill-height fluid pa-2>
                                         <v-layout fill-height>
                                             <v-flex xs12 align-end flexbox>
-                                                <span class="headline white--text" v-text="portfolio.name"></span>
+                                                <span class="text-md white--text" v-text="portfolio.name"></span>
                                             </v-flex>
                                         </v-layout>
                                     </v-container>
@@ -306,7 +305,7 @@
                                     <v-container fill-height fluid pa-2>
                                         <v-layout fill-height>
                                             <v-flex xs12 align-end flexbox>
-                                                <span class="headline white--text" v-text="portfolio.name"></span>
+                                                <span class="text-md white--text" v-text="portfolio.name"></span>
                                             </v-flex>
                                         </v-layout>
                                     </v-container>
@@ -315,7 +314,7 @@
                                 </v-layout>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                     <v-chip outline color="teal">{{ portfolio.genle.name }}</v-chip>
+                                     <v-chip outline color="teal" class="profile-chip">{{ portfolio.genle.name }}</v-chip>
                                 </v-card-actions>
                             </v-card>
                         </v-flex>
@@ -406,7 +405,7 @@
                                             </v-list-tile-avatar>
                                         </v-flex>
                                     </v-card-title>
-                                    <v-card-text class="white-grey--text line-height">
+                                    <v-card-text class="text-pre-line-wrap white-grey--text line-height">
                                         WEB制作/システム構築/その他企業からのオファーも個人で<br>
                                         引き受けておりますので、お問い合わせフォームにお進みください。<br>
                                         ※企業様からの連絡は人材派遣業の紹介などに返信は致しません。<br>
