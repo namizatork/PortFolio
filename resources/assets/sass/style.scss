@@ -1,0 +1,553 @@
+/*-----------------------------------------------------*/
+/* Common */
+/*-----------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif !important;
+  overflow: hidden;
+}
+
+.application {
+  line-height: 1.7 !important;
+}
+
+.theme--dark {
+  &.application {
+    background: #191919;
+  }
+  &.v-toolbar {
+    background: #151515;
+  }
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+a {
+  color: #009688 !important;
+  &:hover {
+    color: #018376 !important;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* Container */
+/*-----------------------------------------------------*/
+
+.container {
+  padding: 40px 0;
+}
+
+.container-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.container-title {
+  margin-bottom: 80px;
+  position: relative;
+  span {
+    display: block;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    content: '';
+    width: 76px;
+    height: 9px;
+    display: block;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+    bottom: 0;
+    transition: all 0s 0.3s ease-in;
+    background: #009688;
+  }
+}
+
+.container-more {
+  margin-top: 30px;
+}
+
+/*-----------------------------------------------------*/
+/* Text */
+/*-----------------------------------------------------*/
+
+.text-xl {
+  font-size: 2.2rem;
+}
+
+.text-lg {
+  font-size: 1.6rem;
+}
+
+.text-md {
+  font-size: 1.4rem;
+}
+
+.text-sm {
+  font-size: 1.2rem;
+}
+
+.text-xs {
+  font-size: 1rem;
+}
+
+.font-weight-title {
+  font-weight: 600;
+}
+
+/*-----------------------------------------------------*/
+/* TextWrap */
+/*-----------------------------------------------------*/
+
+.text-pre-line-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.wrap-normal {
+  line-height: 1.7;
+}
+
+/*-----------------------------------------------------*/
+/* Color */
+/*-----------------------------------------------------*/
+
+.white-grey--text {
+  color: #cecece !important;
+}
+
+.black-grey--text {
+  color: #3a3a3a !important;
+}
+
+.gradation--text {
+  color: #009688;
+  background: -webkit-linear-gradient(0deg, #009688, #009688);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*-----------------------------------------------------*/
+/* Image */
+/*-----------------------------------------------------*/
+
+.v-image__image {
+  background-position: top !important;
+}
+
+.profile-no-image {
+  height: 180px;
+  background: #cecece;
+  .v-icon {
+    font-size: 3rem !important;
+  }
+}
+
+.no-image {
+  height: 400px;
+  background: #cecece;
+  .v-icon {
+    font-size: 4rem !important;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* Border */
+/*-----------------------------------------------------*/
+
+.border-top {
+  border-top: 1px solid #555 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #555 !important;
+}
+
+/*-----------------------------------------------------*/
+/* Rating */
+/*-----------------------------------------------------*/
+
+.v-rating--readonly .v-icon {
+  font-size: 26px !important;
+}
+
+/*-----------------------------------------------------*/
+/* Hover */
+/*-----------------------------------------------------*/
+
+.hover:hover {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12) !important;
+}
+
+/*-----------------------------------------------------*/
+/* Navi */
+/*-----------------------------------------------------*/
+
+.v-toolbar {
+  z-index: 100;
+}
+
+.v-toolbar__content {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1000px;
+  a {
+    padding: 0 20px;
+  }
+}
+
+.router-link-exact-active {
+  color: #009688 !important;
+}
+
+.v-list__tile__action {
+  min-width: 30px;
+}
+
+.v-list__tile--active {
+  color: #009688 !important;
+}
+
+/*-----------------------------------------------------*/
+/* Main */
+/*-----------------------------------------------------*/
+
+#index.main {
+  background-image: url('../images/index-main.svg');
+}
+
+.main {
+  max-width: 1280px !important;
+}
+
+.main-text {
+  padding: 120px 0;
+}
+
+/*-----------------------------------------------------*/
+/* Card */
+/*-----------------------------------------------------*/
+
+.theme--dark.v-card {
+  background: #303030;
+}
+
+.introduction-card .v-card__text::before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  right: 100%;
+  content: "";
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #303030;
+  top: calc(30% - 10px);
+}
+
+.card-table {
+  th, td {
+    padding: 0.85rem;
+    border-top: none;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #9e9e9e;
+  }
+}
+
+.message-card > .message-head {
+  border-bottom: 1px solid #555;
+}
+
+.portfolio-card {
+  margin: 0 auto;
+  max-width: 700px;
+  h5, h6 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.portfolio-card-title {
+  margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #cecece;
+    border-radius: 2px;
+  }
+}
+
+.portfolio-card-text {
+  line-height: 2 !important;
+  white-space: pre-wrap;
+}
+
+.portfolio-card-link {
+  right: 1.5rem;
+  z-index: 0;
+}
+
+.portfolio-card-git {
+  right: 8rem;
+  z-index: 0;
+}
+
+.portfolio-card-footer {
+  min-height: 55px;
+}
+
+.right-box {
+  margin-left: 1rem;
+}
+
+/*-----------------------------------------------------*/
+/* Skill */
+/*-----------------------------------------------------*/
+
+.skills-table {
+  th {
+    padding: 0.85rem;
+    border-top: none;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  td {
+    padding: 0.85rem;
+    border-top: none;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* BlogList */
+/*-----------------------------------------------------*/
+
+.blog-list {
+  background: #303030 !important;
+}
+
+/*-----------------------------------------------------*/
+/* ListTitle */
+/*-----------------------------------------------------*/
+
+.v-list__tile__title {
+  color: #fff;
+}
+
+/*-----------------------------------------------------*/
+/* Avatar */
+/*-----------------------------------------------------*/
+
+.v-avatar .v-icon {
+  width: 0.6875em!important;
+}
+
+.center-avatar {
+  margin: -65px auto 0;
+  display: flex;
+  .v-image {
+    height: 100% !important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #303030;
+  }
+}
+
+.send-message .v-icon {
+  width: 1.3em!important;
+}
+
+.message-profile-image {
+  justify-content: flex-end;
+}
+
+/*-----------------------------------------------------*/
+/* Chip */
+/*-----------------------------------------------------*/
+
+.v-chip {
+  &.v-chip.v-chip--outline {
+    max-width: 80px;
+    min-width: 80px;
+    height: 25px;
+    justify-content: center;
+  }
+  .v-chip__content {
+    padding: 0;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+}
+
+.profile-chip {
+  max-width: 115px !important;
+  min-width: 115px !important;
+}
+
+/*-----------------------------------------------------*/
+/* Pickers */
+/*-----------------------------------------------------*/
+
+.v-progress-circular__underlay {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+/*-----------------------------------------------------*/
+/* Button */
+/*-----------------------------------------------------*/
+
+.v-btn {
+  text-transform: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.v-btn--router:hover {
+  color: #cecece !important;
+}
+
+.round {
+  margin: 6px 8px;
+  padding: 16px;
+  min-width: 88px;
+  display: inline-flex;
+  border-radius: 28px;
+  align-items: center;
+  height: 36px;
+  flex: 0 0 auto;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  outline: 0;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+  vertical-align: middle;
+  will-change: box-shadow;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  &:hover {
+    color: #2e2e2e !important;
+  }
+}
+
+.menu-btn {
+  display: none;
+}
+
+.v-btn--floating.v-btn--large .v-icon {
+  width: 1em!important;
+}
+
+.v-btn--floating.v-btn--small .v-icon {
+  width: 0.875em!important;
+}
+
+.theme--dark.v-btn.v-btn--disabled:not(.v-btn--icon):not(.v-btn--flat):not(.v-btn--outline) {
+  background: #9e9e9e !important;
+}
+
+/*-----------------------------------------------------*/
+/* Responsive */
+/*-----------------------------------------------------*/
+
+@media screen and (max-width: 959px) {
+  /*-----------------------------------------------------*/
+  /* Common */
+  /*-----------------------------------------------------*/
+  body {
+    font-size: 1rem;
+  }
+  /*-----------------------------------------------------*/
+  /* Container */
+  /*-----------------------------------------------------*/
+  .container {
+    padding: 15px 16px;
+  }
+  /*-----------------------------------------------------*/
+  /* Text */
+  /*-----------------------------------------------------*/
+  .text-xl {
+    font-size: 2rem;
+  }
+  .text-lg {
+    font-size: 1.4rem;
+  }
+  .text-md {
+    font-size: 1.2rem;
+  }
+  .text-sm {
+    font-size: 1rem;
+  }
+  .text-xs {
+    font-size: 0.85rem;
+  }
+  /*-----------------------------------------------------*/
+  /* Card */
+  /*-----------------------------------------------------*/
+  .profile-card {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 500px;
+    height: inherit;
+  }
+  .introduction-card {
+    margin: 0 auto;
+    max-width: 500px;
+    height: inherit;
+    .v-card__text::before {
+      display: none;
+    }
+  }
+  .portfolio-card {
+    h5, h6 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+  .right-box {
+    margin-left: 0;
+  }
+  /*-----------------------------------------------------*/
+  /* Skill */
+  /*-----------------------------------------------------*/
+  .skills {
+    margin-bottom: 20px;
+  }
+  /*-----------------------------------------------------*/
+  /* Button */
+  /*-----------------------------------------------------*/
+  .menu-btn {
+    display: flex;
+  }
+}
