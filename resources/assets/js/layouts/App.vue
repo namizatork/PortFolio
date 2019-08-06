@@ -10,7 +10,7 @@
             </v-toolbar-items>
 
             <v-btn fab dark small color="teal" @click.stop="drawer = !drawer" class="mr-3 menu-btn">
-                <v-icon>fal fa-bars</v-icon>
+                <v-icon class="fa-2x">fal fa-bars</v-icon>
             </v-btn>
         </v-toolbar>
 
@@ -39,17 +39,14 @@
             <v-layout justify-center row wrap>
                 <div class="p-3 d-inline-flex">
                     <v-flex class="px-3">
-                        <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-github</v-icon> 
+                        <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="grey">fab fa-github</v-icon> 
                     </a>
                     </v-flex>
                     <v-flex class="px-3">
-                        <a href="https://gitlab.com/namizato?nav_source=navbar" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-gitlab</v-icon></a>
+                        <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="grey">fab fa-twitter</v-icon></a>
                     </v-flex>
                     <v-flex class="px-3">
-                        <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fab fa-twitter</v-icon></a>
-                    </v-flex>
-                    <v-flex class="px-3">
-                        <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="white-grey">fas fa-rss</v-icon></a>
+                        <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="grey--text"><v-icon color="grey">fas fa-rss</v-icon></a>
                     </v-flex>
                 </div>
                 <v-flex xs12 class="py-3 grey darken-3 text-xs-center text-xs grey--text">

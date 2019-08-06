@@ -32,16 +32,16 @@
                                 </v-layout>
                                 <v-card-text style="height: 25px; position: relative">
                                     <v-btn v-if="portfolio.private_flg === 0 && portfolio.url !== null" :href="portfolio.url" target="_blank" color="teal" absolute top right fab large class="portfolio-card-link">
-                                        <v-icon medium color="white" class="d-flex">fal fa-link</v-icon>
+                                        <v-icon color="white" class="d-flex">fal fa-link</v-icon>
                                     </v-btn>
                                     <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-link" disabled>
-                                        <v-icon medium color="white">fal fa-link</v-icon>
+                                        <v-icon color="white">fal fa-link</v-icon>
                                     </v-btn>
                                     <v-btn v-if="portfolio.private_flg === 0 && portfolio.git_url !== null" :href="portfolio.git_url" target="_blank" color="teal" absolute top right fab large class="portfolio-card-git">
-                                         <v-icon medium color="white" class="d-flex">fab fa-github</v-icon>
+                                         <v-icon color="white" class="d-flex">fab fa-github</v-icon>
                                     </v-btn>
                                     <v-btn v-else color="grey" absolute top right fab large class="portfolio-card-git" disabled>
-                                         <v-icon medium color="white">fab fa-github</v-icon>
+                                         <v-icon color="white">fab fa-github</v-icon>
                                     </v-btn>
                                 </v-card-text>
                                 <v-flex>
