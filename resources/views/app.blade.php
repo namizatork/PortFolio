@@ -7,19 +7,22 @@
 
         <title>PortFolio</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
         <!-- Vuetify -->
         <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet">
 
         <!-- Style -->
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+        <link href="{{ mix('/css/style.css') }}" rel="stylesheet">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126220551-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-126220551-1');
+		</script>
     </head>
     <body>
         <!-- View Contents -->
