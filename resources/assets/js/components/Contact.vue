@@ -17,17 +17,17 @@
                                                 <div class="py-4">
                                                     <h5 class="wrap-normal text-pre-line-wrap text-md grey--text">ご連絡はこちらからお願いします。<br>人材派遣紹介やSES企業のスカウトは返信致しません。</h5>
                                                 </div>
-                                                <v-text-field v-model="name" :counter="255" prepend-icon="far fa-user" :rules="nameRules" :error-messages="errors.name" solo color="teal" label="Name"></v-text-field>
-                                                <v-text-field v-model="company" :counter="255" prepend-icon="far fa-building" :rules="companyRules" :error-messages="errors.company" solo color="teal" label="Company"></v-text-field>
-                                                <v-select v-model="requirement" prepend-icon="far fa-list-ol" :rules="requirementRules" :error-messages="errors.requirement" :items="items" color="teal" color-text="white" solo label="Requirement"></v-select>
-                                                <v-text-field v-model="email" prepend-icon="far fa-envelope" :rules="emailRules" :error-messages="errors.email" solo color="teal" label="Email"></v-text-field>
-                                                <v-textarea v-model="text" prepend-icon="far fa-comment-alt-dots" :rules="textRules" :error-messages="errors.text" auto-grow solo color="teal" rows="5" label="Text"></v-textarea>
+                                                <v-text-field v-model="name" :counter="255" :rules="nameRules" :error-messages="errors.name" solo color="teal" label="Name"></v-text-field>
+                                                <v-text-field v-model="company" :counter="255" :rules="companyRules" :error-messages="errors.company" solo color="teal" label="Company"></v-text-field>
+                                                <v-select v-model="requirement" :rules="requirementRules" :error-messages="errors.requirement" :items="items" color="teal" color-text="white" solo label="Requirement"></v-select>
+                                                <v-text-field v-model="email" :rules="emailRules" :error-messages="errors.email" solo color="teal" label="Email"></v-text-field>
+                                                <v-textarea v-model="text" :rules="textRules" :error-messages="errors.text" auto-grow solo color="teal" rows="5" label="Text"></v-textarea>
                                             </v-window-item>
                                             <v-window-item :value="2">
                                                 <h5 class="pt-4 wrap-normal text-pre-line-wrap text-md white--text">ご連絡ありがとうございました。<br>2~3日以内に返信いたしますので、しばらくお待ちください。</h5>
                                                 <div class="py-4">
                                                     <div class="text-center">
-                                                        <v-avatar size="100" color="grey" class="mb-4"><v-icon large>fal fa-paper-plane</v-icon></v-avatar>
+                                                        <v-avatar size="100" color="grey" class="mb-4 send-message"><v-icon large>fal fa-paper-plane</v-icon></v-avatar>
                                                     </div>
                                                 </div>
                                                 <div class="text-center">

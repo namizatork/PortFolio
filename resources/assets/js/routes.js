@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import Index from './components/Index';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
+import Test from './components/Test';
 import Contact from './components/Contact';
 import Login from './admin_components/Login';
 
@@ -37,6 +38,11 @@ const router = new VueRouter({
             path: '/blog',
             name: 'Blog',
             component: Blog
+        },
+        {
+            path: '/test',
+            name: 'Test',
+            component: Test
         },
         {
             path: '/contact',

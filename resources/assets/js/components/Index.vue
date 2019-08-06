@@ -62,7 +62,7 @@
                                     <v-card flat>
                                         <v-card-text>
                                             <v-layout align-center mb-3>
-                                                <v-avatar color="grey" class="mr-3"><v-icon>fal fa-lightbulb</v-icon></v-avatar>
+                                                <v-avatar size="50" color="grey" class="mr-3"><v-icon>fal fa-lightbulb</v-icon></v-avatar>
                                                 <strong class="text-lg">Hi! my name is Tatsuya Namizato</strong>
                                                 <v-spacer></v-spacer>
                                             </v-layout>
@@ -374,16 +374,13 @@
                             <h4 class="text-lg teal--text">SOCIAL CONTACT</h4>
                             <v-flex class="mt-4 right-box">
                                 <v-flex class="mb-4">
-                                    <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github</v-icon> Git Hub</a>
+                                    <a href="https://github.com/namizatork" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-github-square</v-icon> Git Hub</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <a href="https://gitlab.com/namizato?nav_source=navbar" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-gitlab</v-icon> Git Lab</a>
+                                    <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter-square</v-icon> Twitter</a>
                                 </v-flex>
                                 <v-flex class="mb-4">
-                                    <a href="https://twitter.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fab fa-twitter</v-icon> Twitter</a>
-                                </v-flex>
-                                <v-flex class="mb-4">
-                                    <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss</v-icon> Qiita</a>
+                                    <a href="https://qiita.com/namizatop" target="_blank" rel="noopener noreferrer" class="white-grey--text"><v-icon color="white-grey" class="mr-2">fas fa-rss-square</v-icon> Qiita</a>
                                 </v-flex>
                             </v-flex>
                         </v-flex>
@@ -400,7 +397,7 @@
                                         </v-flex>
                                         <v-flex class="text-right">
                                             <span class="grey--text text-xs"><v-icon small color="grey">fal fa-clock</v-icon> 2019.08.01</span>
-                                            <v-list-tile-avatar color="grey darken-3" class="message-profile-image mt-2">
+                                            <v-list-tile-avatar :size="50" color="grey darken-3" class="message-profile-image mt-2">
                                                 <v-avatar color="grey" class="elevation-1"><v-icon>fal fa-user</v-icon></v-avatar>
                                             </v-list-tile-avatar>
                                         </v-flex>
