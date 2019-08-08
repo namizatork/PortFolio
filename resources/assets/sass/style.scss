@@ -133,13 +133,6 @@ a {
   color: #3a3a3a !important;
 }
 
-.gradation--text {
-  color: #009688;
-  background: -webkit-linear-gradient(0deg, #009688, #009688);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /*-----------------------------------------------------*/
 /* Image */
 /*-----------------------------------------------------*/
@@ -369,7 +362,8 @@ a {
 /*-----------------------------------------------------*/
 
 .v-avatar .v-icon {
-  width: 0.6875em!important;
+  font-size: inherit!important;
+  height: 1.5em!important;
 }
 
 .center-avatar {
@@ -385,7 +379,8 @@ a {
 }
 
 .send-message .v-icon {
-  width: 1.3em!important;
+  font-size: inherit!important;
+  height: 2.5em!important;
 }
 
 .message-profile-image {
@@ -466,11 +461,13 @@ button:focus {
 }
 
 .v-btn--floating.v-btn--large .v-icon {
-  width: 1em!important;
+  font-size: inherit!important;
+  height: 2em!important;
 }
 
 .v-btn--floating.v-btn--small .v-icon {
-  width: 0.875em!important;
+  font-size: inherit!important;
+  height: 2em!important;
 }
 
 .theme--dark.v-btn.v-btn--disabled:not(.v-btn--icon):not(.v-btn--flat):not(.v-btn--outline) {

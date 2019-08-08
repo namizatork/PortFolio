@@ -3,7 +3,6 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Routes from './routes.js';
 import InfiniteLoading from 'vue-infinite-loading';
-import VueLocalStorage from 'vue-localstorage';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
     faBriefcase,
@@ -34,8 +33,6 @@ import {
     faGithub
 } from '@fortawesome/free-brands-svg-icons';
 
-dom.watch()
-
 library.add(
     faBriefcase,
     faBirthdayCake,
@@ -49,21 +46,19 @@ library.add(
     faBars,
     faLayerPlus,
     faPen,
-    faLink
-);
-library.add(
+    faLink,
     faCircle,
     faRssSquare,
     faCaretDown,
-    faRss
-);
-library.add(
+    faRss,
     faTwitter,
     faGit,
     faGithubSquare,
     faTwitterSquare,
     faGithub
 );
+
+dom.watch();
 
 import App from './layouts/App';
 
@@ -75,7 +70,7 @@ Vue.use(Vuetify, {
         dark: '#191919',
         teal: '#009688'
     },
-    iconfont: 'fa',
+    iconfont: 'faSvg',
     icons: {
         'ratingEmpty': 'fas fa-circle',
         'ratingFull': 'fas fa-circle',
@@ -85,8 +80,6 @@ Vue.use(Vuetify, {
 
 //無限スクロール
 Vue.use(InfiniteLoading);
-//ローカルストレージ
-Vue.use(VueLocalStorage)
 
 const app = new Vue({
     el: '#app',
