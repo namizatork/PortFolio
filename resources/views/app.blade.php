@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="description" content="Laravel好きのサーバーサイドエンジニア歴3年目の並里です。エンジニアのポートフォリオが少なかったのでしっかり作ってみました。">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@namizatop">
+        <meta property="og:url" content="https://namizatork.com">
+        <meta property="og:title" content="並里ポートフォリオ">
+        <meta property="og:description" content="Laravel好きのサーバーサイドエンジニア歴3年目の並里です。エンジニアのポートフォリオが少なかったのでしっかり作ってみました。">
+        <meta property="og:image" content="https://namizatork.com/images/twitter_ogp.png">
 
         <title>PortFolio</title>
 

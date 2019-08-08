@@ -62,7 +62,7 @@
                                     <v-card flat>
                                         <v-card-text>
                                             <v-layout align-center mb-3>
-                                                <v-avatar size="50" color="grey" class="mr-3"><v-icon>fal fa-lightbulb</v-icon></v-avatar>
+                                                <v-avatar size="50" color="grey" class="mr-3"><v-icon fa-fw>fal fa-lightbulb</v-icon></v-avatar>
                                                 <strong class="text-lg">Hi! my name is Tatsuya Namizato</strong>
                                                 <v-spacer></v-spacer>
                                             </v-layout>
