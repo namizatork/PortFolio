@@ -32,6 +32,6 @@ class Contact extends Mailable
         return $this->from('namizatork@icloud.com')
             ->subject('Portfolioからお問い合わせがありました。')
             ->with(['contact' => $this->contact])
-            ->view('mails/contact');
+            ->text('mails/contact');
     }
 }
