@@ -28,10 +28,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^1.2.21",
-        "@fortawesome/free-brands-svg-icons": "^5.10.1",
-        "@fortawesome/pro-light-svg-icons": "^5.10.1",
-        "@fortawesome/pro-solid-svg-icons": "^5.10.1",
+        "@fortawesome/fontawesome-svg-core": "^1.2.20-14",
+        "@fortawesome/free-brands-svg-icons": "^5.10.0-14",
+        "@fortawesome/pro-light-svg-icons": "^5.10.0-14",
+        "@fortawesome/pro-solid-svg-icons": "^5.10.0-14",
         "@fortawesome/vue-fontawesome": "^0.1.6",
         "css-loader": "^3.0.0",
         "mavon-editor": "^2.7.5",
