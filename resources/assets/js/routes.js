@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 //ページコンポーネントをインポートする
+import Notfound from './components/Notfound'
 import Index from './components/Index';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
@@ -24,6 +25,10 @@ const router = new VueRouter({
     },
     mode: 'history',
     routes: [
+        {
+            path: '*',
+            component: Notfound
+        },
         {
             path: '/',
             name: 'Index',
